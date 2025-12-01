@@ -2,339 +2,259 @@ from __future__ import annotations
 
 import os
 import tempfile
-import time
-from typing import Any, Dict
+from typing import Dict
 
 import streamlit as st
+from dotenv import load_dotenv
 from jamaibase import JamAI, types as t
 
 # ==============================
-# Configuration
+# Load environment variables
 # ==============================
+load_dotenv()
+PROJECT_ID = os.getenv("JAMAI_PROJECT_ID")
+PAT = os.getenv("JAMAI_PAT")
 
-# You can hardcode, or read from environment variables.
-DEFAULT_PROJECT_ID = os.getenv("JAMAI_PROJECT_ID", "proj_47c5d5e744b0953d71ba7748")
-DEFAULT_PAT = os.getenv("JAMAI_PAT", "jamai_pat_4e67ed6cf6f873c79193c08f3369f907691e1e4f3bd53b95")
+if not PROJECT_ID or not PAT:
+    raise RuntimeError("JAMAI_PROJECT_ID or JAMAI_PAT missing in .env")
 
-# Exact table IDs from your project
-TABLE_DETECT = "1. Detect The Problem"
-TABLE_FOLLOWUP = "2. Follow-Up Question"
-TABLE_CAUSES = "3. Determine The Causes"
-TABLE_SOLUTION = "4. Proposed Solution"
-TABLE_FINAL = "5. Final Conclusion"
+# JamAI client (correct signature)
+client = JamAI(project_id=PROJECT_ID, token=PAT)
 
+# ==============================
+# Table IDs
+# ==============================
+TABLE_DETECT = "1. Detect the Problem"
+TABLE_CLARIFY = "2. User Clarification"
+TABLE_FINAL = "3. Final Conclusion"
+
+# ==============================
+# Streamlit config
+# ==============================
+st.set_page_config(
+    page_title="CropCheckAI",
+    page_icon="🌱",
+    layout="wide",
+)
+st.title("🌾 CropCheckAI – Fruit & Crop Disease Assistant")
 
 # ==============================
 # Helpers
 # ==============================
 
-def get_client(project_id: str, pat: str) -> JamAI:
-    if not project_id or not pat:
-        raise RuntimeError("Project ID and PAT must be set.")
-    return JamAI(project_id=project_id, token=pat)
-
-
-def upload_to_jamai(client: JamAI, uploaded_file) -> str:
-    """Upload a Streamlit UploadedFile to JamAI File API and return its URI."""
-    suffix = os.path.splitext(uploaded_file.name)[1] or ".bin"
-    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
-        tmp.write(uploaded_file.read())
-        tmp_path = tmp.name
+def upload_streamlit_file(tmp_file) -> str:
+    """Save uploaded file to a temp path and upload to JamAI file store.
+    Returns the file URI that can be used in an Action table.
+    """
+    suffix = os.path.splitext(tmp_file.name)[1]
+    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as f:
+        f.write(tmp_file.read())
+        temp_path = f.name
 
     try:
-        resp = client.file.upload_file(tmp_path)
-        return getattr(resp, "uri", "")
+        file_resp = client.file.upload_file(temp_path)
+        return file_resp.uri
     finally:
         try:
-            os.remove(tmp_path)
-        except Exception:
+            os.remove(temp_path)
+        except OSError:
             pass
 
 
-def safe_text(cell: Any) -> str:
-    try:
-        return getattr(cell, "text", "") or ""
-    except Exception:
-        return ""
-
-
-def type_out(text: str, placeholder, delay: float = 0.015) -> None:
-    """Simple typing animation into a Streamlit placeholder."""
-    buf = ""
-    for ch in text:
-        buf += ch
-        placeholder.markdown(buf)
-        time.sleep(delay)
-
-
-def call_action_table(
-    client: JamAI,
-    table_id: str,
-    data: Dict[str, Any],
-    stream: bool = False,
-) -> Dict[str, Any]:
-    """Call one Action Table row and return dict of column_id -> cell."""
-    req = t.MultiRowAddRequest(table_id=table_id, data=[data], stream=stream)
-    res = client.table.add_table_rows(t.TableType.ACTION, req)
-    # When stream=False, res is a MultiRowCompletionResponse
-    row0 = res.rows[0]
-    return row0.columns
-
-
-# ==============================
-# Streamlit UI
-# ==============================
-
-st.set_page_config(page_title="CropCheck AI", page_icon="🌱", layout="wide")
-
-st.title("🌱 CropCheck AI – Fruit Problem Helper")
-st.caption("Upload a fruit image, describe the problem, then follow the guided steps.")
-
-# Sidebar: credentials
-with st.sidebar:
-    st.subheader("JamAI Settings")
-    project_id = st.text_input("Project ID", value=DEFAULT_PROJECT_ID)
-    pat = st.text_input("Personal Access Token (PAT)", value=DEFAULT_PAT, type="password")
-    st.markdown("---")
-    st.caption("These values stay local on your machine and are only used to call JamAI Base.")
-
-# Init session state
-for key, default in [
-    ("crop_type", ""),
-    ("initial_guess", ""),
-    ("conf_problem", ""),
-    ("clarifying_q", ""),
-    ("purpose_q", ""),
-    ("user_answer", ""),
-    ("root_cause", ""),
-    ("reasoning", ""),
-    ("recommended_solution", ""),
-    ("safety_avoid", ""),
-    ("conf_solution", ""),
-    ("summary", ""),
-    ("future_tips", ""),
-    ("description", ""),
-    ("image_uri", ""),
-]:
-    st.session_state.setdefault(key, default)
-
-# Layout
-left, right = st.columns([1, 1])
-
-with left:
-    st.subheader("Step 1 – Upload & Describe")
-
-    img_file = st.file_uploader(
-        "Fruit image",
-        type=["jpg", "jpeg", "png", "webp"],
-        help="Upload a clear photo of the fruit.",
-    )
-    if img_file:
-        st.image(img_file, caption="Uploaded fruit image", use_column_width=True)
-
-    description = st.text_area(
-        "Describe what you see / what you’re worried about",
-        value=st.session_state["description"],
-        height=120,
+def run_action_row(table_id: str, data: Dict[str, str]) -> Dict[str, str]:
+    """Call an Action table once and return a simple dict of outputs."""
+    resp = client.table.add_table_rows(
+        table_type=t.TableType.ACTION,
+        request=t.RowAddRequest(
+            table_id=table_id,
+            data=[data],
+            stream=False,
+        ),
     )
 
-    run_step1_btn = st.button("🔍 Run Step 1 + 2 (Detect & Question)", type="primary")
+    row = resp.rows[0]
+    out: Dict[str, str] = {}
+    for col_name, col_val in row.columns.items():
+        # Most of your columns are text outputs
+        if hasattr(col_val, "text") and col_val.text is not None:
+            out[col_name] = col_val.text
 
-with right:
-    st.subheader("Step 2 – Results & Clarifying Question")
-    detect_placeholder = st.empty()
-    question_placeholder = st.empty()
-    purpose_placeholder = st.empty()
+    return out
 
-# ==============================
-# Step 1 + 2: Detect problem & generate clarifying question
-# ==============================
-
-if run_step1_btn:
-    try:
-        client = get_client(project_id, pat)
-    except Exception as e:
-        st.error(f"JamAI client error: {e}")
-    else:
-        if not img_file:
-            st.warning("Please upload an image first.")
-        elif not description.strip():
-            st.warning("Please enter a short description.")
-        else:
-            with st.spinner("Sending image to JamAI (Detect The Problem)…"):
-                img_uri = upload_to_jamai(client, img_file)
-                st.session_state["image_uri"] = img_uri
-                st.session_state["description"] = description
-
-                # --- Table 1: Detect The Problem ---
-                cols1 = call_action_table(
-                    client,
-                    TABLE_DETECT,
-                    {
-                        "Crop Image": img_uri,
-                        "Description": description,
-                    },
-                    stream=False,
-                )
-
-                crop_type = safe_text(cols1.get("Crop Type"))
-                initial_guess = safe_text(cols1.get("Initial Problem Guess"))
-                conf_problem = safe_text(cols1.get("Confidence Score Problem"))
-
-                st.session_state["crop_type"] = crop_type
-                st.session_state["initial_guess"] = initial_guess
-                st.session_state["conf_problem"] = conf_problem
-
-                detect_placeholder.markdown(
-                    f"""
-                    **Detected crop:** `{crop_type or "Unknown"}`  
-                    **Initial problem guess:** `{initial_guess or "—"}`  
-                    **Confidence (problem):** `{conf_problem or "—"}`
-                    """
-                )
-
-            with st.spinner("Generating follow-up question…"):
-                # --- Table 2: Follow-Up Question ---
-                cols2 = call_action_table(
-                    client,
-                    TABLE_FOLLOWUP,
-                    {
-                        "Crop Type": crop_type,
-                        "Initial Problem Guess": initial_guess,
-                        "Confidence Score Problem": conf_problem,
-                    },
-                    stream=False,
-                )
-                clarifying_q = safe_text(cols2.get("Clarifying Question"))
-                purpose_q = safe_text(cols2.get("Purpose of Question"))
-
-                st.session_state["clarifying_q"] = clarifying_q
-                st.session_state["purpose_q"] = purpose_q
-
-                question_placeholder.markdown(f"**Clarifying question:** {clarifying_q}")
-                purpose_placeholder.markdown(f"*Purpose:* {purpose_q}")
-
-# Show question + answer box if we have a clarifying question
-if st.session_state["clarifying_q"]:
-    st.markdown("---")
-    st.subheader("Step 3 – Your Answer")
-
-    st.write("Please answer the clarifying question in your own words:")
-    st.info(st.session_state["clarifying_q"])
-
-    st.session_state["user_answer"] = st.text_area(
-        "Your answer",
-        value=st.session_state["user_answer"],
-        height=80,
-    )
-
-    run_rest_btn = st.button("✅ Run Steps 3–5 (Cause → Solution → Conclusion)")
-
-else:
-    run_rest_btn = False
 
 # ==============================
-# Steps 3–5: Cause, Solution, Final Conclusion
+# Session state
 # ==============================
 
-if run_rest_btn:
-    if not st.session_state["user_answer"].strip():
-        st.warning("Please type your answer to the clarifying question first.")
-    else:
-        try:
-            client = get_client(project_id, pat)
-        except Exception as e:
-            st.error(f"JamAI client error: {e}")
-        else:
-            with st.spinner("Determining root cause…"):
-                cols3 = call_action_table(
-                    client,
-                    TABLE_CAUSES,
-                    {
-                        "Crop Type": st.session_state["crop_type"],
-                        "Initial Problem Guess": st.session_state["initial_guess"],
-                        "User Answer": st.session_state["user_answer"],
-                        "Description": st.session_state["description"],
-                    },
-                    stream=False,
-                )
+if "step" not in st.session_state:
+    st.session_state.step = 1
 
-                root_cause = safe_text(cols3.get("Root Cause"))
-                reasoning = safe_text(cols3.get("Reasoning"))
+if "detect_out" not in st.session_state:
+    st.session_state.detect_out = None
 
-                st.session_state["root_cause"] = root_cause
-                st.session_state["reasoning"] = reasoning
+if "clarify_out" not in st.session_state:
+    st.session_state.clarify_out = None
 
-            with st.spinner("Generating recommended solution…"):
-                cols4 = call_action_table(
-                    client,
-                    TABLE_SOLUTION,
-                    {
-                        "Crop Type": st.session_state["crop_type"],
-                        "Root Cause": root_cause,
-                        "Initial Problem Guess": st.session_state["initial_guess"],
-                        "User Answer": st.session_state["user_answer"],
-                    },
-                    stream=False,
-                )
+if "final_out" not in st.session_state:
+    st.session_state.final_out = None
 
-                recommended = safe_text(cols4.get("Recommended Solution"))
-                safety_avoid = safe_text(cols4.get("Safety or Avoid List"))
-                conf_solution = safe_text(cols4.get("Confidence Score Solution"))
 
-                st.session_state["recommended_solution"] = recommended
-                st.session_state["safety_avoid"] = safety_avoid
-                st.session_state["conf_solution"] = conf_solution
+def reset_all():
+    st.session_state.step = 1
+    st.session_state.detect_out = None
+    st.session_state.clarify_out = None
+    st.session_state.final_out = None
+    st.rerun()
 
-            with st.spinner("Building final summary & prevention tips…"):
-                cols5 = call_action_table(
-                    client,
-                    TABLE_FINAL,
-                    {
-                        "Crop Type": st.session_state["crop_type"],
-                        "Root Cause": root_cause,
-                        "Users Answer": st.session_state["user_answer"],
-                        "Recommended Solution": recommended,
-                    },
-                    stream=False,
-                )
 
-                summary = safe_text(cols5.get("Summary"))
-                future_tips = safe_text(cols5.get("Future Prevention Tips"))
+# Sidebar
+st.sidebar.header("Actions")
+if st.sidebar.button("🔄 Start over", use_container_width=True):
+    reset_all()
+st.sidebar.markdown("This tool focuses on **fruit & crop diseases** only.")
 
-                st.session_state["summary"] = summary
-                st.session_state["future_tips"] = future_tips
+# =======================================================================
+# STEP 1 – Detect the Problem  (Table: 1. Detect the Problem)
+# =======================================================================
+if st.session_state.step == 1:
+    st.header("Step 1 – Upload crop image & symptoms")
 
-# ==============================
-# Display final results (with small typing effect)
-# ==============================
+    c1, c2 = st.columns([1, 1])
 
-if st.session_state["root_cause"]:
-    st.markdown("---")
-    st.subheader("Step 4 – Diagnosis & Solution")
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown(f"**Crop type:** {st.session_state['crop_type'] or 'Unknown'}")
-        st.markdown(f"**Root cause:** {st.session_state['root_cause'] or '—'}")
-        st.markdown(f"**Reasoning:** {st.session_state['reasoning'] or '—'}")
-
-    with col2:
-        st.markdown(f"**Recommended solution:** {st.session_state['recommended_solution'] or '—'}")
-        st.markdown(f"**Safety / avoid:** {st.session_state['safety_avoid'] or '—'}")
-        st.markdown(
-            f"**Confidence (solution):** {st.session_state['conf_solution'] or '—'}"
+    # ----------- IMAGE UPLOAD -----------
+    with c1:
+        user_image = st.file_uploader(
+            "Upload a photo of the affected crop/fruit",
+            type=["jpg", "jpeg", "png"],
         )
 
-if st.session_state["summary"]:
-    st.markdown("---")
-    st.subheader("Step 5 – Final Conclusion")
+        # Show preview immediately
+        if user_image:
+            st.markdown("### 📷 Image Preview")
+            st.image(user_image, use_column_width=True)
 
-    summary_ph = st.empty()
-    tips_ph = st.empty()
+    # ----------- DESCRIPTION -----------
+    with c2:
+        user_desc = st.text_area(
+            "Describe the symptoms (spots, rot, wilting, etc.)",
+            placeholder="Example: Brown spots on mango leaves, some fruits turning black near the stem...",
+            height=200,
+        )
 
-    # Typing effect for the summary only (so it feels “live”)
-    type_out(st.session_state["summary"], summary_ph)
+    # ----------- SUBMIT BUTTON -----------
+    if st.button("Analyze disease", type="primary"):
+        if not user_image or not user_desc:
+            st.warning("Please upload an image **and** describe the symptoms.")
+        else:
+            with st.spinner("Analyzing crop / fruit disease..."):
+                img_uri = upload_streamlit_file(user_image)
 
-    tips_ph.markdown(f"**Future prevention tips:** {st.session_state['future_tips'] or '—'}")
+                detect_out = run_action_row(
+                    TABLE_DETECT,
+                    {
+                        "user_image": img_uri,
+                        "user_desc": user_desc,
+                    },
+                )
+
+                st.session_state.detect_out = detect_out
+                st.session_state.step = 2
+                st.rerun()
+
+    st.stop()
+
+
+# =======================================================================
+# STEP 2 – User Clarification  (Table: 2. User Clarification)
+# =======================================================================
+if st.session_state.step == 2:
+    detect = st.session_state.detect_out
+
+    st.header("Step 2 – Confirm details about the disease")
+
+    st.write("### 🧾 Detected crop & initial disease guess")
+    st.info(
+        f"**Crop type:** {detect.get('crop_type', 'N/A')}\n\n"
+        f"**Initial disease guess:** {detect.get('initial_guess', 'N/A')}\n\n"
+        f"**Confidence level:** {detect.get('confidence_level', 'N/A')}"
+    )
+
+    st.write("### ❓ Clarifying question")
+    st.warning(detect.get("clarifying_question", "No question generated."))
+
+    user_answer = st.text_area(
+        "Your answer (based on what you see in your field):",
+        placeholder="Example: Yes, the spots are spreading from lower leaves upwards...",
+    )
+
+    if st.button("Submit answer", type="primary"):
+        if not user_answer:
+            st.warning("Please type your answer first.")
+        else:
+            with st.spinner("Interpreting your answer..."):
+                # IMPORTANT: this expects an **input column** in table 2.
+                # Create an INPUT text column named `user_answer` in
+                # \"2. User Clarification\" and keep the three outputs you showed.
+                clarify_out = run_action_row(
+                    TABLE_CLARIFY,
+                    {
+                        "user_answer": user_answer,
+                    },
+                )
+
+                st.session_state.clarify_out = clarify_out
+                st.session_state.step = 3
+                st.rerun()
+
+    st.stop()
+
+
+# =======================================================================
+# STEP 3 – Final Conclusion  (Table: 3. Final Conclusion)
+# =======================================================================
+if st.session_state.step == 3:
+    detect = st.session_state.detect_out
+    clarify = st.session_state.clarify_out
+
+    st.header("Step 3 – Final diagnosis & recommendations")
+
+    # We pass a compact case summary into table 3.
+    # Create an INPUT text column in \"3. Final Conclusion\" called `case_context`
+    # and keep your four output columns.
+    case_context = f"""
+Crop type: {detect.get('crop_type', '')}
+Initial disease guess: {detect.get('initial_guess', '')}
+Confidence level: {detect.get('confidence_level', '')}
+
+Cleaned user clarification: {clarify.get('cleaned_answer', '')}
+Interpretation of answer: {clarify.get('answer_interpretation', '')}
+Does user answer support initial guess?: {clarify.get('supports_initial_guess', '')}
+"""
+
+    with st.spinner("Generating final fruit/crop disease diagnosis..."):
+        final_out = run_action_row(
+            TABLE_FINAL,
+            {
+                "case_context": case_context,
+            },
+        )
+        st.session_state.final_out = final_out
+
+    final = st.session_state.final_out
+
+    st.subheader("🌿 Final disease diagnosis")
+    st.success(final.get("final_diagnosis", "No diagnosis generated."))
+
+    st.subheader("🦠 Cause")
+    st.write(final.get("cause", "No cause generated."))
+
+    st.subheader("🧴 Treatment steps")
+    st.write(final.get("treatment_steps", "No treatment steps generated."))
+
+    st.subheader("🛡 Prevention tips")
+    st.write(final.get("prevention_tips", "No prevention tips generated."))
+
+    st.success("✔ Fruit/crop disease analysis completed.")
+
+    if st.button("Start a new case"):
+        reset_all()
