@@ -1,0 +1,35 @@
+Fruit: Apple
+
+Diseases:
+1. Apple Scab
+   - dark olive leaf spots
+   - scabby fruit patches
+   - deformed fruits
+2. Powdery Mildew
+   - white leaf coating
+   - twisted young leaves
+   - reduced fruiting
+3. Fire Blight
+   - blackened shoots
+   - shepherd’s crook bending
+   - bacterial ooze
+4. Bitter Rot
+   - sunken circular fruit lesions
+   - salmon-colored spore masses
+   - soft internal rot
+5. Alternaria Leaf Spot
+   - brown leaf spots
+   - concentric rings
+   - early leaf fall
+6. Mosaic Virus
+   - mottled yellow leaves
+   - irregular patterns
+   - slowed growth
+7. Fruit Borer Damage
+   - holes in fruit
+   - internal browning
+   - premature drop
+8. Root Rot
+   - declining tree vigor
+   - wilted shoots
+   - brown rotted roots

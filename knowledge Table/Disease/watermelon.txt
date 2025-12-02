@@ -1,0 +1,35 @@
+Fruit: Watermelon
+
+Diseases:
+1. Anthracnose
+   - dark circular fruit spots
+   - scorched leaf lesions
+   - vine decline
+2. Fusarium Wilt
+   - one-sided vine wilting
+   - brown internal stem streaks
+   - collapsed vines
+3. Downy Mildew
+   - yellow angular leaf spots
+   - grey fuzzy underside
+   - rapid defoliation
+4. Powdery Mildew
+   - white powder patches
+   - leaf yellowing
+   - reduced fruit size
+5. Gummy Stem Blight
+   - gummy ooze from stem cracks
+   - brown leaf spots
+   - vine dieback
+6. Bacterial Fruit Blotch
+   - dark water-soaked rind spots
+   - spreading blotches
+   - fruit cracking
+7. Mosaic Virus
+   - mottled leaf patterns
+   - leaf distortion
+   - stunted vines
+8. Blossom-End Rot
+   - sunken dark lesion at fruit end
+   - leathery texture
+   - calcium deficiency-related

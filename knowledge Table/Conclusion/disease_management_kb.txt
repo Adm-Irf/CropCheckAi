@@ -1,0 +1,565 @@
+anthracnose:
+cause: Colletotrichum fungi; high humidity; rain splash spread; survives on infected stems, leaves, fruit debris;
+treatment: prune infected areas; apply copper or systemic fungicide; improve airflow; remove fallen debris; follow local spray calendar;
+prevention: prune canopy to reduce moisture; avoid overhead irrigation; sanitize orchard floor; plant resistant or tolerant varieties;
+
+powdery_mildew:
+cause: fungal infection growing on leaf surfaces; thrives in warm humid but low rainfall environments; spreads by airborne spores;
+treatment: remove heavily infected shoots; apply sulfur, potassium bicarbonate, or systemic fungicide; increase airflow around plants;
+prevention: avoid overcrowding; prune dense canopies; improve sun penetration; choose tolerant varieties when possible;
+
+black_sigatoka:
+cause: Pseudocercospora fijiensis fungus; spreads through airborne spores; encouraged by high humidity, long leaf wetness, poor airflow;
+treatment: remove severely infected banana leaves; rotate fungicides to avoid resistance; maintain field sanitation; improve spacing and airflow;
+prevention: plant tolerant banana cultivars; avoid overhead irrigation; prune lower yellowing leaves; reduce humidity through good plantation layout;
+
+alternaria_leaf_spot:
+cause: Alternaria fungi infecting stressed leaves; spreads by wind and splashing rain; thrives in warm and humid conditions;
+treatment: prune affected leaves; apply appropriate fungicide; avoid overhead watering; improve ventilation;
+prevention: maintain balanced nutrition; remove leaf litter; avoid dense planting; choose resistant varieties when available;
+
+botrytis_rot:
+cause: Botrytis cinerea fungus; infects flowers and fruit during cool humid weather; survives on dead plant tissue;
+treatment: remove infected tissues; improve ventilation; apply registered fungicides during high-risk periods; avoid wetting flowers;
+prevention: prune to increase airflow; remove dead leaves and fruit; avoid overhead irrigation; reduce humidity around plant canopy;
+
+sooty_mold:
+cause: fungal growth feeding on honeydew secreted by insects (aphids, scales, whiteflies); fungus does not infect plant directly;
+treatment: control insect pests generating honeydew; wash leaves gently with water; prune heavily coated leaves if needed;
+prevention: manage sap-sucking insects; encourage natural predators; avoid excessive nitrogen that promotes insect outbreaks;
+
+rust_disease:
+cause: rust fungi producing orange or brown pustules; spreads through windborne spores; thrives in moist leaf surfaces;
+treatment: remove infected leaves; apply recommended fungicides; improve air circulation; reduce leaf wetness duration;
+prevention: avoid overhead watering; prune dense canopy; plant resistant varieties; sanitize fallen leaves;
+
+leaf_spot_general:
+cause: various fungal pathogens causing circular or irregular leaf spots; spreads through rain splash; thrives in warm moisture;
+treatment: remove infected leaves; apply appropriate fungicide; ensure proper nutrient balance; avoid leaf wetness;
+prevention: prune regularly; allow airflow; maintain orchard hygiene; avoid overcrowded planting;
+
+phytophthora_root_rot:
+cause: Phytophthora oomycete infects roots in poorly drained soils; spreads through water movement and saturated conditions; attacks crown and feeder roots;
+treatment: improve drainage immediately; apply phosphonate or approved anti-oomycete treatments; remove severely affected plants; avoid standing water;
+prevention: plant on raised beds; avoid over-irrigation; keep soil aerated; maintain proper drainage channels;
+
+phytophthora_fruit_rot:
+cause: Phytophthora species infect fruit during wet, rainy periods; spreads by water splash and contaminated soil; thrives in standing water;
+treatment: remove infected fruits; improve drainage; avoid fruit contact with wet soil; apply recommended fungicides if necessary;
+prevention: prune for better airflow; stake fruits off ground; maintain dry conditions around fruit; avoid overhead watering;
+
+phytophthora_blight:
+cause: infection by Phytophthora on stems, roots, fruit; common in wet tropical climates; spreads through contaminated soil and splashing water;
+treatment: remove diseased stems or fruit; trench or drain waterlogged areas; apply phosphonate-based treatments where recommended;
+prevention: increase soil drainage; reduce excessive moisture; keep canopy open; avoid dense planting;
+
+fusarium_wilt:
+cause: soil-borne Fusarium fungus enters through roots; blocks vascular system; persists for years in contaminated soil; spreads by infected tools or planting material;
+treatment: remove infected plants entirely; solarize soil if possible; avoid replanting susceptible crops; use resistant varieties or grafted rootstocks;
+prevention: sanitize tools; ensure well-drained soil; rotate with non-host crops; plant disease-free seedlings;
+
+fusarium_fruit_rot:
+cause: Fusarium fungi infect wounded or stressed fruits; spreads through soil, insects, and post-harvest handling; thrives in warm humid environments;
+treatment: remove infected fruits promptly; improve sanitation; avoid fruit injuries; use clean harvesting tools;
+prevention: handle fruits gently; maintain orchard hygiene; control insects that cause wounds; sanitize equipment;
+
+crown_rot:
+cause: fungal or oomycete pathogens infect the crown area; worsened by excess moisture around stem base; common in bananas, papaya, and tropical fruits;
+treatment: remove diseased crown tissues; improve drainage; apply approved fungicidal drenches if recommended; avoid water contact with crown;
+prevention: plant shallower and avoid burying crown; ensure proper drainage; keep mulch away from stem base;
+
+stem_canker:
+cause: fungal or bacterial pathogens entering through wounds; causes cracking bark and sunken lesions; worsened by high humidity and injuries;
+treatment: prune affected branches well below infected area; disinfect pruning tools; improve airflow around canopy;
+prevention: avoid mechanical injuries; prune during dry weather; maintain vigorous balanced growth; avoid waterlogging;
+
+dieback_disease:
+cause: multiple fungi or bacteria causing twig and branch dieback; favored by plant stress, nutrient deficiency, or drought; spreads via rain splash;
+treatment: prune out dead and dying branches; improve plant nutrition; ensure sufficient water drainage; apply fungicide where justified;
+prevention: reduce plant stress; maintain balanced fertilization; prune regularly to remove weak twigs; sanitize fallen debris;
+
+fruit_rot_general:
+cause: mix of fungal pathogens causing soft rot, discoloration, and decay; spreads through wounds and humidity; often post-harvest infection;
+treatment: remove rotting fruits; improve ventilation; avoid fruit contact with wet soil; sanitize harvesting tools;
+prevention: handle fruits gently; keep orchard floor clean; avoid overcrowded canopy; maintain proper pruning;
+
+stem_end_rot:
+cause: fungal infection at fruit stem end; favored by moisture and post-harvest stress; spreads from stems to fruit interior;
+treatment: improve post-harvest handling; cool fruits promptly; apply fungicidal dips if recommended locally; remove infected fruits;
+prevention: prune for better airflow; avoid bruising fruits; harvest carefully to avoid stem damage;
+
+bacterial_canker:
+cause: bacterial infection entering through wounds or cracks; spreads by rain and contaminated tools; causes water-soaked lesions and oozing;
+treatment: prune infected stems; disinfect tools; use copper-based bactericides if allowed; remove severely affected plants;
+prevention: avoid overhead irrigation; prune during dry weather; use certified disease-free seedlings; improve orchard hygiene;
+
+bacterial_blight:
+cause: bacterial pathogen infecting leaves and young shoots; spreads via wind-driven rain and water splash; causes rapid necrotic patches;
+treatment: remove infected leaves; apply copper sprays if recommended; avoid wet foliage during field work;
+prevention: maintain clean orchard; avoid overcrowding; ensure balanced fertilization; prune to improve airflow;
+
+bacterial_soft_rot:
+cause: bacterial infection that causes watery decay of stems or fruits; spreads through wounds and high humidity; worsened by warm tropical climates;
+treatment: remove and destroy infected tissues; avoid fruit injuries; sanitize tools and harvest equipment;
+prevention: handle plants gently; avoid standing water; control insects causing wounds; maintain cleanliness;
+
+pink_disease:
+cause: fungal infection forming pink crust on stems and branches; spreads in humid tropical conditions; weakens and kills branches;
+treatment: prune out infected branches; burn removed wood; apply sulfur or copper-based treatments to prune wounds;
+prevention: maintain good canopy ventilation; avoid moisture buildup; prune regularly to remove weak branches;
+
+sunscald_or_sunburn:
+cause: excessive direct sunlight on exposed fruit or stems; damages cells and causes bleaching or cracking; worsened by sudden defoliation;
+treatment: shade exposed fruits; maintain leaf cover; prune gradually instead of heavy thinning; remove severely damaged fruits;
+prevention: avoid sudden canopy thinning; use shade nets in extreme heat; maintain balanced foliage density;
+
+brown_spot_disease:
+cause: various fungi causing small expanding brown lesions; spreads by rain splash and humidity; common in dragonfruit, passionfruit, pear;
+treatment: remove infected tissues; improve airflow; apply fungicide where economically justified; reduce prolonged leaf wetness;
+prevention: prune dense growth; avoid overcrowding; maintain orchard sanitation;
+
+mosaic_virus:
+cause: plant viruses spread by aphids, whiteflies, or contaminated tools; thrive in warm climates; cause distorted and mottled leaves;
+treatment: remove severely infected plants; control vector insects; sanitize tools frequently; improve plant vigor through proper nutrition;
+prevention: use certified virus-free seedlings; manage weeds that host viruses; apply reflective mulch to reduce vector landing; monitor for insect outbreaks;
+
+papaya_ringspot_virus:
+cause: viral pathogen transmitted mainly by aphids; infects papaya and cucurbit relatives; creates ring patterns on fruit and mosaic on leaves;
+treatment: no cure for infected plants; remove infected trees immediately; reduce aphid populations; remove nearby cucurbit weeds;
+prevention: plant resistant varieties; establish buffer zones away from cucurbit crops; use reflective mulch; maintain vector monitoring;
+
+bunchy_top_virus:
+cause: banana bunchy top virus spread by banana aphid and infected suckers; restricts plant growth and leaf elongation; stunts entire plant;
+treatment: remove infected mats; destroy contaminated planting material; manage banana aphids; sanitize tools;
+prevention: use certified BBTV-free suckers; remove volunteer banana plants; maintain aphid monitoring; avoid planting near infected farms;
+
+fruit_borer_damage:
+cause: larvae of fruit-boring insects enter fruit through small punctures; feed internally causing rot and drop; attracted to stressed or unprotected fruits;
+treatment: remove infested fruits; use pheromone traps; bag young fruits; apply biological or approved insecticides if needed;
+prevention: harvest on time; maintain orchard sanitation; use fruit bagging practices; monitor for moth activity with traps;
+
+leaf_miner_damage:
+cause: larvae tunneling inside leaves creating winding silver trails; weakened leaves become susceptible to pathogens; high in warm humid areas;
+treatment: remove heavily mined leaves; encourage natural predators; apply selective insecticides if needed; avoid broad-spectrum sprays;
+prevention: keep plants vigorous; avoid excess nitrogen; use yellow sticky traps; prune dense growth to reduce miner habitat;
+
+nematode_damage:
+cause: root-knot nematodes feeding on roots causing swelling; reduce nutrient uptake; spread through soil and contaminated tools;
+treatment: apply organic soil amendments to improve soil structure; solarize soil if possible; remove heavily infested plants; apply nematicides only if permitted;
+prevention: rotate crops; avoid moving infested soil; use resistant rootstocks; add organic matter to promote beneficial microbes;
+
+bacterial_leaf_spot:
+cause: bacterial infection causing angular water-soaked spots; spreads by splashing water; infects during wet warm conditions;
+treatment: remove infected leaves; avoid overhead irrigation; apply copper sprays if permitted; sanitize tools;
+prevention: maintain airflow; avoid working on wet foliage; plant resistant varieties; manage weeds that harbor bacteria;
+
+bacterial_blight_general:
+cause: various bacteria attacking young tissues; spread by rain, wind, tools; cause rapid necrotic patches and stem lesions;
+treatment: prune infected shoots; apply copper bactericides when allowed; improve spacing; avoid wounding plants;
+prevention: keep canopy open; irrigate at soil level; sanitize equipment; maintain balanced nutrition;
+
+citrus_greening_hlb:
+cause: bacterial pathogen Candidatus liberibacter spread by Asian citrus psyllid; causes yellow mottling and fruit deformities; incurable once established;
+treatment: remove infected trees; manage psyllid vectors aggressively; improve tree nutrition to slow decline; prune dead branches;
+prevention: use certified disease-free citrus seedlings; monitor psyllid populations; remove abandoned citrus hosts nearby; follow regional HLB programs;
+
+sooty_mold_insect_linked:
+cause: fungal growth feeding on honeydew from aphids, scale insects, mealybugs; blocks sunlight; weakens plant indirectly;
+treatment: control honeydew-producing insects; wash leaves; prune heavily coated areas;
+prevention: maintain insect control; avoid excess nitrogen; promote natural predators like ladybugs;
+
+scab_disease_general:
+cause: fungal infection creating raised corky lesions; spreads during wet warm periods; infects new shoots and young fruit;
+treatment: prune infected shoots; apply fungicide during flushing periods; avoid overhead watering;
+prevention: maintain proper spacing; prune to improve light penetration; remove fallen debris;
+
+dieback_fungal:
+cause: infection by fungi like Botryosphaeria or Phomopsis; enters through wounds; causes branch death from tip inward; triggered by stress or drought;
+treatment: prune below infected area; burn pruned branches; improve irrigation consistency; apply fungicide to wounds if recommended;
+prevention: avoid mechanical injury; prune during dry weather; reduce plant stress; maintain balanced fertilization;
+
+leaf_blight_general:
+cause: mix of fungi attacking weakened leaves; spreads fast during warm humid periods; causes large brown patches and leaf death;
+treatment: remove infected leaves; improve airflow; apply appropriate fungicide; avoid prolonged leaf wetness;
+prevention: prune regularly; avoid overcrowded planting; maintain field sanitation; ensure proper drainage;
+
+dieback_bacterial:
+cause: bacterial infection entering through cracks and wounds; spreads internally causing blackened stems and branch decline;
+treatment: prune infected branches; sterilize tools; apply copper if permitted; improve airflow;
+prevention: prevent injuries; prune only in dry conditions; maintain orchard hygiene; use disease-free planting material;
+
+anthracnose_fruit_rot:
+cause: Colletotrichum fungi infecting fruit during humid conditions; often post-harvest; causes sunken dark lesions;
+treatment: remove infected fruits; cool fruit quickly after harvest; apply post-harvest fungicidal dips if allowed;
+prevention: harvest during dry weather; handle fruit gently; prune canopy for airflow; avoid fruit-to-soil contact;
+
+citrus_canker:
+cause: Xanthomonas bacteria entering through wounds or stomata; spreads by wind-driven rain and contaminated tools; thrives in warm humid citrus areas;
+treatment: prune infected twigs and fruit; disinfect tools; apply copper bactericides if permitted; remove severely affected trees;
+prevention: plant disease-free seedlings; avoid working with wet foliage; use windbreaks; maintain orchard hygiene;
+
+greasy_spot:
+cause: fungal infection of citrus leaves; infects during warm humid nights; spores spread through leaf litter and wind;
+treatment: apply recommended fungicides during high-risk months; rake and destroy fallen leaves; maintain tree vigor with nutrition;
+prevention: prune dense canopies; manage leaf litter; avoid excessive shading; follow local spray schedules;
+
+citrus_scab:
+cause: fungal pathogen Elsinoë species; infects young leaves, stems, fruit; spreads by splashing water and wind-blown rain;
+treatment: prune out infected shoots; apply fungicides at flushing and early fruit set; improve airflow in canopy;
+prevention: avoid dense plantings; plant resistant cultivars; maintain clean orchard by removing infected debris;
+
+melanose:
+cause: fungal disease caused by Diaporthe citri; spores released from dead twigs and branches; infects young tissue during rain;
+treatment: prune dead wood; apply fungicides when necessary; maintain strong tree vigor;
+prevention: regularly remove dead twigs; avoid excessive shade; prune canopy to reduce moisture accumulation;
+
+sooty_mold_citrus:
+cause: mold growing on honeydew from aphids or scale insects; blocks sunlight on leaves; weakens plants indirectly;
+treatment: control sap-sucking insects; wash or wipe leaves; prune coated leaves if severe;
+prevention: maintain pest control; encourage natural predators; reduce excessive nitrogen fertilizer;
+
+phytophthora_gummosis:
+cause: Phytophthora infection at trunk base; causes gumming and bark cracking; worsened by wet soil and trunk injury;
+treatment: dry soil around trunk; remove infected bark areas; apply phosphonate treatments if allowed;
+prevention: avoid trunk wounds; keep mulch away from trunk; ensure good drainage; avoid water hitting trunk;
+
+anthracnose_citrus:
+cause: Colletotrichum fungi infecting leaves and fruit in humid weather; spreads through rain and moist debris;
+treatment: prune infected shoots; apply copper or systemic fungicides; improve airflow;
+prevention: prune regularly; avoid prolonged moisture; maintain orchard sanitation;
+
+mango_anthracnose:
+cause: Colletotrichum fungi infecting mango flowers, leaves, fruit; common in rainy seasons; causes fruit black spots and blossom blight;
+treatment: remove infected panicles; apply pre-flowering fungicides; increase airflow; avoid overhead irrigation;
+prevention: prune tightly packed branches; harvest during dry conditions; use resistant mango varieties if available;
+
+mango_powdery_mildew:
+cause: fungal growth on mango flowers and young leaves; spreads via wind; worsened by cool nights and humid mornings;
+treatment: apply sulfur or systemic fungicides when panicles emerge; remove infected flowers; improve airflow;
+prevention: prune canopy; avoid excess shade; manage humidity during flowering season;
+
+mango_dieback:
+cause: fungal infection (Botryosphaeria) entering through wounds or stress cracks; leads to shoot and branch death;
+treatment: prune branches below infected area; disinfect tools; improve tree vigor with balanced nutrients;
+prevention: prune during dry weather; avoid mechanical injury; maintain regular irrigation schedules;
+
+mango_bacterial_black_spot:
+cause: bacterial infection causing raised dark lesions on mango fruit and leaves; spreads by wind, rain, and tools;
+treatment: remove infected tissues; use copper sprays when permitted; avoid overhead watering;
+prevention: sanitize tools; prune dense canopy; plant resistant cultivars where available;
+
+papaya_anthracnose:
+cause: Colletotrichum fungi causing fruit spots during ripening; common in humid tropics; spreads by rain splash;
+treatment: remove infected fruits; apply fungicide before harvest; improve airflow around trees;
+prevention: harvest during dry periods; keep orchard clean; avoid fruit-to-soil contact;
+
+papaya_phytophthora_blight:
+cause: Phytophthora palmivora infecting papaya stems, fruits, and roots; spreads by water splash and saturated soils;
+treatment: improve drainage; remove badly infected fruits; apply phosphonate if allowed; mound soil to keep stems dry;
+prevention: avoid waterlogged planting; prune lower leaves touching soil; maintain raised beds;
+
+papaya_leaf_spot:
+cause: fungal leaf infection producing brown or tan circular spots; spreads by rain splash; more common during wet seasons;
+treatment: remove infected leaves; apply registered fungicides; improve airflow;
+prevention: prune canopy; avoid overcrowded planting; sanitize fallen leaves;
+
+dragonfruit_anthracnose:
+cause: fungal infection on stems and fruit; creates dark, sunken lesions; thrives in humid tropical environments;
+treatment: prune infected stem sections; disinfect tools; use appropriate fungicides; improve airflow;
+prevention: avoid excess moisture; train vines on trellis for good ventilation; remove damaged stems promptly;
+
+dragonfruit_stem_canker:
+cause: fungal or bacterial infection entering through wounds; produces wet sunken lesions; spreads in high humidity;
+treatment: cut out cankered tissue; disinfect cuts; apply fungicide or bactericide depending on diagnosis;
+prevention: avoid injuries; prune to maintain open architecture; sanitize pruning tools;
+
+dragonfruit_bacterial_soft_rot:
+cause: bacterial infection causing soft watery rot of stems or fruit; spreads through wounds and humid environments;
+treatment: remove affected tissue immediately; improve ventilation; reduce overhead watering; disinfect cuts;
+prevention: avoid stem injury; sanitize trellises; control insects that create wounds;
+
+guava_anthracnose:
+cause: Colletotrichum fungi infecting guava fruit; spreads during rainy season; worsened by leaf wetness;
+treatment: prune infected twigs; apply copper-based fungicides; remove affected fruits;
+prevention: prune for airflow; maintain orchard sanitation; avoid wetting fruits during irrigation;
+
+guava_wilt:
+cause: Fusarium or bacterial wilt pathogens blocking water transport; enters through roots or wounds; rapid canopy decline;
+treatment: remove infected trees; avoid replanting in same spot; sanitize tools; improve soil health with organic matter;
+prevention: use disease-free seedlings; avoid waterlogging; rotate with non-host crops;
+
+guava_fruit_rot:
+cause: fungal infection causing brown soft patches on fruit; spreads by rain and insects; thrives in humidity;
+treatment: remove rotting fruits; improve airflow; avoid fruit injuries; apply fungicide if needed;
+prevention: sanitize orchard floor; prune for sunlight penetration; harvest fruit promptly;
+
+soursop_leaf_spot:
+cause: fungal infection producing circular brown leaf lesions; spreads through rain splash; worsens with poor airflow;
+treatment: remove affected leaves; apply fungicidal spray; reduce shade;
+prevention: prune to increase airflow; maintain tree vigor; remove debris beneath trees;
+
+soursop_stem_blight:
+cause: fungal pathogens infecting weakened stems; spreads through wounds; worsened by humid tropical climate;
+treatment: cut out infected stems; disinfect tools; improve drainage and canopy airflow;
+prevention: prune during dry weather; avoid trunk injury; maintain orchard sanitation;
+
+soursop_fruit_rot:
+cause: fungi infecting fruit during wet seasons; spreads by insects and rain; causes softening and internal decay;
+treatment: remove affected fruits; improve ventilation; avoid fruit contact with soil;
+prevention: keep orchard floor clean; prune canopy; harvest fruit before overripening;
+
+grape_downy_mildew:
+cause: Plasmopara viticola oomycete; infects leaves during warm humid nights; spreads via wind and rain; thrives in leaf wetness;
+treatment: apply anti-oomycete fungicides; remove infected leaves; improve vineyard ventilation; avoid excessive irrigation;
+prevention: maintain open canopy; prune for airflow; use resistant varieties; monitor humidity and apply sprays preventively;
+
+grape_powdery_mildew:
+cause: fungal infection by Erysiphe necator; spreads via airborne spores; common in shaded, humid grape canopies;
+treatment: apply sulfur or systemic fungicides; remove infected leaves; increase sunlight penetration;
+prevention: prune dense vines; avoid canopy shading; maintain good airflow; monitor disease pressure seasonally;
+
+grape_botrytis_bunch_rot:
+cause: Botrytis cinerea infecting grape clusters in humid weather; spreads by spores from dead tissue; attacks injured berries;
+treatment: remove infected clusters; apply fungicide pre-harvest; improve canopy sunlight penetration; manage cluster density;
+prevention: prune for ventilation; avoid berry injury; control pests that break skins; remove fallen debris;
+
+blueberry_mummy_berry:
+cause: Monilinia fungus infecting flowers and fruit; fruits shrivel and harden; fungus survives in mummified berries;
+treatment: remove mummified berries; apply fungicides at early bloom; improve airflow;
+prevention: rake and destroy mummies on ground; prune canopy; maintain good sanitation in field;
+
+blueberry_botrytis_rot:
+cause: Botrytis fungus infecting flowers and ripe berries in humid climates; spreads through rain and debris;
+treatment: remove moldy berries; apply fungicides if needed; improve airflow; harvest promptly;
+prevention: avoid overhead irrigation; reduce humidity; prune for ventilation; keep area free of old berries;
+
+blueberry_leaf_spot:
+cause: various fungi causing circular brown spots with dark margins; spreads by rain splash; worsened by dense canopy;
+treatment: remove diseased leaves; apply fungicides; improve sun exposure;
+prevention: prune dense branches; maintain field hygiene; avoid leaf wetness;
+
+mulberry_leaf_spot:
+cause: fungal pathogens infecting weakened mulberry leaves; spreads through humidity and rain; causes widespread spotting;
+treatment: remove infected leaves; apply fungicides; increase sunlight and airflow;
+prevention: prune overcrowded plants; maintain sanitation; improve drainage;
+
+mulberry_dieback:
+cause: fungal pathogens entering through wounds; causes twig death in stressed trees; spreads in humid climates;
+treatment: prune dead twigs well below infection; disinfect tools; improve irrigation and nutrition;
+prevention: reduce environmental stress; prune during dry weather; avoid trunk injuries;
+
+apple_scab:
+cause: Venturia inaequalis fungus; infects young leaves and fruit in wet spring conditions; spreads through overwintered leaves;
+treatment: apply fungicides during early growth; remove scabby fruit; prune infected shoots;
+prevention: rake and destroy fallen leaves; prune for airflow; use resistant apple cultivars;
+
+apple_powdery_mildew:
+cause: fungal infection of young apple shoots and leaves; spreads by wind; worsened by humid crowded canopies;
+treatment: prune infected shoot tips; apply fungicides; improve air movement;
+prevention: avoid excessive nitrogen; prune regularly; plant in sunny locations;
+
+apple_fire_blight:
+cause: Erwinia amylovora bacteria killing shoots and blossoms; spreads by rain, insects, and contaminated tools; thrives in warm humid spring;
+treatment: prune infected branches 20–30 cm below symptoms; disinfect tools; remove blossoms during outbreaks;
+prevention: avoid high nitrogen; prune during dry weather; plant tolerant varieties; manage insect vectors;
+
+pear_scab:
+cause: fungal infection similar to apple scab; thrives in cool moist environments; spreads from infected leaf litter;
+treatment: apply fungicides at early shoot emergence; remove scabby fruit; prune for ventilation;
+prevention: remove fallen leaves; avoid overhead watering; plant resistant cultivars;
+
+pear_fire_blight:
+cause: bacterial infection causing blackened shoots and flowers; spreads by rain and insects; infects during warm moist weather;
+treatment: prune infected shoots well below affected area; sterilize tools; remove blighted blossoms;
+prevention: reduce nitrogen; prune during dry weather; plant tolerant varieties; maintain orchard sanitation;
+
+pear_leaf_spot:
+cause: fungal pathogens causing numerous small brown leaf lesions; spread by rain splash; worsen with poor airflow;
+treatment: prune affected leaves; apply fungicides; improve air circulation;
+prevention: maintain balanced nutrition; avoid dense planting; remove leaf litter;
+
+watermelon_anthracnose:
+cause: Colletotrichum fungi infecting vines and fruit; spreads quickly in wet warm conditions; damages leaves and fruit rind;
+treatment: remove infected vines; apply fungicides; avoid overhead irrigation; rotate crops;
+prevention: plant resistant varieties; prune for airflow; keep soil well-drained; maintain sanitation;
+
+watermelon_fusarium_wilt:
+cause: Fusarium fungus blocking water vessels; survives in soil for many years; infects roots and vine base;
+treatment: remove infected vines; solarize soil; use resistant watermelon varieties;
+prevention: rotate with non-hosts; sanitize tools; avoid continuous melon planting;
+
+watermelon_bacterial_fruit_blotch:
+cause: acidovorax bacteria causing dark water-soaked rind lesions; spreads by seed, tools, and rain; thrives in warm humid weather;
+treatment: remove infected plants; avoid overhead irrigation; disinfect tools; follow seed hygiene standards;
+prevention: use certified clean watermelon seed; avoid leaf wetness; maintain proper spacing;
+
+watermelon_gummy_stem_blight:
+cause: Didymella bryoniae fungus infecting stems and leaves; causes gummy ooze and cracked stems; spreads in warm humid climates;
+treatment: prune infected stems; apply fungicides; improve airflow; reduce leaf wetness;
+prevention: rotate crops; avoid overcrowding; maintain sanitation; prune lower leaves touching soil;
+
+honeydew_powdery_mildew:
+cause: fungal growth on melon leaves; spreads via wind; common in hot dry periods with high humidity;
+treatment: apply sulfur or systemic fungicide; remove infected leaves; increase sunlight exposure;
+prevention: avoid overcrowding; prune vines; water at soil level; choose resistant varieties;
+
+melon_downy_mildew:
+cause: oomycete infecting cucurbit leaves; spreads by wind and moisture; causes angular yellow leaf spots;
+treatment: apply anti-oomycete fungicides; remove infected leaves; avoid wet foliage;
+prevention: increase airflow; plant in sunny areas; avoid dense canopy; maintain good drainage;
+
+passionfruit_brown_spot:
+cause: fungal infection causing leaf and fruit lesions; spreads via rain splash; worsened by humidity;
+treatment: remove infected tissue; apply fungicides; improve airflow; reduce excess shade;
+prevention: prune continuously; avoid overhead irrigation; remove weeds that trap moisture;
+
+passionfruit_fusarium_wilt:
+cause: Fusarium fungi infecting roots and vines; spreads in contaminated soil; blocks water flow;
+treatment: remove infected vines; solarize soil; avoid replanting passionfruit in same spot; improve soil drainage;
+prevention: plant disease-free seedlings; maintain sanitation; rotate crops; avoid waterlogged areas;
+
+passionfruit_septoria_leaf_spot:
+cause: fungal infection creating numerous small leaf lesions; spreads by rain; increases during wet season;
+treatment: remove infected leaves; apply fungicides; improve ventilation;
+prevention: maintain good spacing; reduce leaf wetness; prune lower shoots;
+
+postharvest_soft_rot:
+cause: various bacteria and fungi infecting wounds after harvest; worsened by poor storage conditions; spreads via contaminated surfaces;
+treatment: discard rotting fruits; sanitize storage rooms and crates; cool fruits quickly; maintain proper ventilation;
+prevention: handle fruit gently; avoid bruising; use clean packing materials; store at recommended temperature;
+
+postharvest_mold_rot:
+cause: mold growth on stored fruit in humid or poorly ventilated areas; spores spread through air; worsened by damaged fruit skin;
+treatment: remove moldy fruits; improve ventilation; sanitize storage; lower humidity;
+prevention: maintain low humidity in storage; avoid mixing damaged with healthy fruits; clean crates regularly;
+
+banana_cigar_end_rot:
+cause: fungal infection on banana fruit tips; spreads under humid storage or rainy conditions; enters through minor injuries;
+treatment: remove infected hands; allow proper ventilation; apply postharvest fungicidal dips if permitted;
+prevention: harvest at correct maturity; avoid bruising; keep fruit dry; maintain clean packing areas;
+
+banana_crown_rot:
+cause: fungal complex infecting crown tissue after harvest; worsened by excessive moisture; spreads through handling equipment;
+treatment: trim infected crown tissue; cool bananas quickly; use approved postharvest fungicides; improve sanitation;
+prevention: sanitize cutting tools; keep crowns dry; avoid stacking wet bunches; maintain clean packing stations;
+
+banana_moko_disease:
+cause: Ralstonia bacteria infecting vascular tissue; spreads by tools, insects, and contaminated suckers; causes fruit discoloration and wilting;
+treatment: remove entire infected mats; disinfect soil tools; avoid transporting infected material; isolate affected blocks;
+prevention: use certified moko-free planting material; sanitize tools; manage insects; maintain strict farm hygiene;
+
+banana_freckle:
+cause: fungal infection causing numerous small dark spots on fruit and leaves; spreads by rain and wind; more severe in humid tropics;
+treatment: prune heavily infected leaves; apply fungicides where permitted; improve airflow;
+prevention: avoid dense planting; prune regularly; maintain orchard cleanliness;
+
+banana_panama_disease:
+cause: Fusarium oxysporum f.sp. cubense; infects roots and blocks water flow; persists for decades in soil; catastrophic for banana;
+treatment: remove infected mats; avoid replanting bananas in the area; sanitize tools; use resistant cultivars (if available);
+prevention: plant only certified disease-free suckers; avoid soil movement; maintain drainage; rotate with non-host crops where possible;
+
+jackfruit_dieback:
+cause: fungal pathogens like Botryosphaeria entering through cracks; branch death progresses inward; favored by drought stress;
+treatment: prune infected branches; disinfect tools; improve watering consistency; apply fungicides to pruning wounds;
+prevention: avoid trunk injury; prune in dry weather; maintain balanced nutrition; irrigate during dry spells;
+
+jackfruit_fruit_rot:
+cause: fungal infection of unripe and ripe fruit; spreads by rain, insects, and poor airflow; causes soft watery patches;
+treatment: remove rotting fruits; improve canopy ventilation; avoid fruit touching soil; apply fungicide if needed;
+prevention: prune overcrowded branches; harvest fruits earlier; sanitize orchard floor;
+
+jackfruit_leaf_spot:
+cause: fungal pathogens causing brown or tan circular spots; increases during heavy rains; spreads via water splash;
+treatment: remove infected leaves; apply fungicide; improve airflow;
+prevention: prune regularly; avoid overhead irrigation; remove fallen debris;
+
+coconut_bud_rot:
+cause: Phytophthora or related pathogens infecting growing bud; worsened by prolonged humidity; causes spear leaf collapse;
+treatment: remove infected bud tissue if possible; apply copper or phosphonate; improve drainage around palm base;
+prevention: avoid waterlogging; maintain palm health; improve airflow; remove fallen fronds;
+
+coconut_lethal_yellowing:
+cause: phytoplasma spread by planthoppers; causes yellowing, fruit drop, and death; no cure once systemic;
+treatment: remove infected palms; in some regions tetracycline injections slow disease; control vector insects;
+prevention: plant resistant coconut varieties; monitor vector activity; maintain clean farm sanitation;
+
+coconut_stem_bleeding:
+cause: fungal infection causing reddish-brown fluid oozing from trunk; spreads in warm humid climates; weakens palm structure;
+treatment: remove infected bark; apply fungicides if recommended; improve drainage; reduce trunk injury;
+prevention: avoid wounds on trunk; maintain good sanitation; prune fronds properly;
+
+coconut_root_wilt:
+cause: possible phytoplasma or environmental stress causing leaf drooping and root decline; worsened by drought or poor soil health;
+treatment: improve irrigation; apply balanced nutrients; remove severely affected palms;
+prevention: maintain proper watering; improve soil fertility; avoid compacted soils;
+
+rambutan_anthracnose:
+cause: Colletotrichum fungi infecting rambutan leaves and fruit; spreads through humid rainy weather; worsened with dense canopy;
+treatment: prune infected twigs; apply fungicides; improve ventilation; remove infected fruit;
+prevention: prune canopy; avoid excessive shade; maintain orchard sanitation;
+
+rambutan_leaf_spot:
+cause: fungal pathogens creating brown irregular spots; spreads by rain splash; worsened in low airflow areas;
+treatment: remove spotted leaves; apply fungicide; reduce humidity by pruning;
+prevention: improve canopy airflow; maintain proper spacing; remove fallen leaves;
+
+rambutan_shoot_disease:
+cause: fungal infection entering tender shoots; causes dieback of new growth; common during continuous rainfall;
+treatment: prune infected shoots; disinfect tools; apply fungicide during new flush;
+prevention: prune overcrowded branches; avoid overhead irrigation; monitor regularly during monsoon;
+
+lychee_anthracnose:
+cause: fungal infection causing sunken dark lesions on fruit; spread by rain and humidity; affects stems and leaves;
+treatment: remove infected tissues; apply fungicides during fruit development; improve airflow;
+prevention: prune dense canopy; harvest early; avoid fruit-to-soil contact;
+
+lychee_leaf_blight:
+cause: various fungi causing large brown dry patches; spreads through wet leaves and high humidity; worsened with shade;
+treatment: prune infected leaves; apply fungicide; increase sunlight penetration;
+prevention: ensure good spacing; reduce shade; maintain proper pruning;
+
+lychee_stem_canker:
+cause: fungal pathogens entering bark; creates sunken lesions and branch dieback; worsened by injury and humidity;
+treatment: cut out cankered tissue; disinfect tools; improve airflow; apply fungicide if needed;
+prevention: avoid mechanical damage; prune during dry conditions; remove infected branches early;
+
+longan_anthracnose:
+cause: fungal infection producing black sunken fruit spots; spreads during high humidity; common post-harvest;
+treatment: remove infected fruit; apply fungicides; improve canopy ventilation; reduce moisture;
+prevention: prune for airflow; sanitize orchard floor; avoid handling fruit when wet;
+
+longan_leaf_blight:
+cause: fungal pathogens causing drying leaf lesions; favored by prolonged humidity; spreads via rain splash;
+treatment: remove blighted leaves; apply fungicides; improve light penetration;
+prevention: reduce shade; prune regularly; avoid overcrowded planting;
+
+longan_root_rot:
+cause: Phytophthora or other soil pathogens infecting roots; worsened by poor drainage; causes wilting and stunting;
+treatment: improve drainage; remove severely infected trees; apply phosphonate if recommended;
+prevention: plant in raised beds; avoid waterlogging; maintain good soil aeration;
+
+sapodilla_leaf_spot:
+cause: fungal infection producing circular brown spots; spreads through moisture and rainfall; common in tropical sapodilla orchards;
+treatment: remove infected leaves; apply fungicides; improve airflow;
+prevention: prune canopy; reduce overcrowding; remove leaf litter;
+
+sapodilla_fruit_rot:
+cause: fungi infecting fruit through skin cracks or insect wounds; spreads in humidity; causes soft watery rot;
+treatment: remove infected fruit; improve ventilation; avoid fruit injury; apply fungicide if necessary;
+prevention: sanitize orchard; harvest carefully; prune for good airflow;
+
+sapodilla_blossom_end_rot:
+cause: calcium transport issues combined with fungal opportunists; causes dark sunken fruit-end lesions; worsened by inconsistent watering;
+treatment: maintain even irrigation; apply calcium foliar sprays if recommended; remove affected fruits;
+prevention: ensure consistent soil moisture; avoid drought stress; maintain balanced nutrition;
+
+soursop_pink_disease:
+cause: pink fungal growth on branches; spreads through humid nights; infects bark and weakens branches;
+treatment: prune infected branches; disinfect tools; apply sulfur or copper-based treatments;
+prevention: improve airflow; reduce moisture accumulation; prune during dry weather;
+
+tropical_root_rot_complex:
+cause: mixed fungi and oomycetes attacking roots in saturated soil; common in tropical low-drainage orchards; leads to yellowing, stunting, dieback;
+treatment: improve drainage; remove severely infected trees; apply phosphonate or appropriate fungicides;
+prevention: plant on mounds; avoid waterlogging; maintain good soil structure; prune to reduce canopy stress;
+

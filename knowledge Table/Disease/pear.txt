@@ -1,0 +1,35 @@
+Fruit: Pear
+
+Diseases:
+1. Scab
+   - olive-green fruit spots
+   - scabby rough patches
+   - leaf lesions
+2. Fire Blight
+   - blackened wilted shoots
+   - burnt leaf appearance
+   - bacterial ooze
+3. Pear Leaf Spot
+   - small brown leaf specks
+   - yellow borders
+   - widespread spotting
+4. Black Rot
+   - dark circular fruit rot
+   - shriveled patches
+   - black leaf spots
+5. Powdery Mildew
+   - white powder coating
+   - leaf curling
+   - distorted shoots
+6. Rust
+   - bright orange spots
+   - raised spore pustules
+   - early leaf fall
+7. Fruit Borer Damage
+   - small skin holes
+   - internal tunneling
+   - fruit deformities
+8. Root Rot
+   - stunted tree growth
+   - yellow canopy
+   - decayed roots

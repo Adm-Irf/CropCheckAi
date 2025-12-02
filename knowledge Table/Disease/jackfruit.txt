@@ -1,0 +1,35 @@
+Fruit: Jackfruit
+
+Diseases:
+1. Rhizopus Fruit Rot
+   - soft watery rot on fruit
+   - rapid collapse of flesh
+   - white cottony fungal growth
+2. Anthracnose
+   - dark sunken spots
+   - spreading black lesions
+   - fruit surface cracking
+3. Pink Disease
+   - pink fungal coating on branches
+   - twig dieback
+   - bark cracking
+4. Fruit Borer Damage
+   - small entry holes
+   - frass inside fruit
+   - internal fruit decay
+5. Stem Rot (Phytophthora)
+   - brown stem lesions
+   - water-soaked patches
+   - stem collapse
+6. Bacterial Blight
+   - water-soaked leaf spots
+   - yellow margin lesions
+   - leaf drop
+7. Fruit Bronzing
+   - bronze-colored patches
+   - rough fruit surface
+   - uneven ripening
+8. Alternaria Leaf Spot
+   - brown leaf spots
+   - concentric rings
+   - premature leaf fall

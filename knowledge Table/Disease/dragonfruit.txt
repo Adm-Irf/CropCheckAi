@@ -1,0 +1,43 @@
+Fruit: Dragonfruit
+
+Diseases:
+
+1. Anthracnose
+   - circular sunken lesions on stems or fruit
+   - orange or pink spore masses
+   - soft rot in advanced stages
+
+2. Bacterial Soft Rot
+   - watery softening of stem tissue
+   - foul smell from decay
+   - brown collapsing areas
+
+3. Stem Canker
+   - brown cracking lesions on stem
+   - dry sunken patches
+   - dark powdery fungal growth
+
+4. Brown Spot Disease
+   - small brown dots that expand
+   - dry circular patches
+   - cracking of older lesions
+
+5. Botryosphaeria Rot
+   - dark sunken stem spots
+   - yellow margins around lesions
+   - stem dieback
+
+6. Alternaria Stem Rot
+   - elongated dark lesions
+   - yellowing around affected areas
+   - stem drying
+
+7. Sunburn
+   - bleached yellow patches
+   - rough thickened skin
+   - cracks in severe cases
+
+8. Nematode Damage
+   - stunted growth
+   - swollen or galled roots
+   - reduced fruit size

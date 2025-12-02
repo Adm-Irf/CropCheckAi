@@ -1,0 +1,35 @@
+Fruit: Guava
+
+Diseases:
+1. Anthracnose
+   - black circular fruit spots
+   - dry cracked lesions
+   - ripening fruit rot
+2. Wilt Disease
+   - sudden leaf drooping
+   - brown vascular tissues
+   - plant collapse
+3. Fruit Fly Damage
+   - small puncture marks
+   - brown soft patches
+   - larvae tunneling
+4. Rust
+   - orange powdery pustules
+   - leaf underside spots
+   - premature leaf shedding
+5. Canker
+   - raised corky patches
+   - cracking lesions
+   - deformed fruit
+6. Fruit Rot (Fusarium)
+   - water-soaked fruit areas
+   - color shifts to brown
+   - softening flesh
+7. Cercospora Leaf Spot
+   - greyish circular spots
+   - dark borders
+   - leaf drop
+8. Root Rot
+   - yellow wilted canopy
+   - stunted growth
+   - black mushy roots

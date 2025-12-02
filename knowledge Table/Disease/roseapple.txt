@@ -1,0 +1,35 @@
+Fruit: Rose Apple
+
+Diseases:
+1. Fruit Rot
+   - brown soft patches
+   - water-soaked fruit surface
+   - rapid decay
+2. Anthracnose
+   - dark sunken spots
+   - cracked skin
+   - post-harvest rot
+3. Rust
+   - orange powdery pustules
+   - scattered leaf spots
+   - early leaf fall
+4. Leaf Spot
+   - small brown lesions
+   - yellow margins
+   - widespread spotting
+5. Bacterial Blight
+   - water-soaked leaf streaks
+   - oily necrotic patches
+   - twig dieback
+6. Fruit Fly Damage
+   - puncture holes
+   - larvae tunnels
+   - internal fruit breakdown
+7. Sooty Mold
+   - black leaf coating
+   - sticky honeydew residue
+   - reduced photosynthesis
+8. Powdery Mildew
+   - white leaf coating
+   - curled new leaves
+   - reduced flowering

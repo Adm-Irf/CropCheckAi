@@ -1,0 +1,35 @@
+Fruit: Mangosteen
+
+Diseases:
+1. Stem-End Rot
+   - darkening at fruit stem
+   - softening around attachment point
+   - sour odor
+2. Fruit Rot (Phytophthora)
+   - brown soft patches
+   - watery lesions
+   - rapid decay
+3. Pink Disease
+   - pink fungal crust
+   - twig dieback
+   - bark splitting
+4. Anthracnose
+   - black sunken lesions
+   - dry cracked patches
+   - fruit surface blemishes
+5. Black Spot
+   - tiny scattered dark dots
+   - roughened skin
+   - non-expanding spots
+6. Leaf Blight
+   - brown necrotic areas
+   - leaf curling
+   - premature drop
+7. Fruit Borer Damage
+   - small holes in rind
+   - brown tunnels inside
+   - internal decay
+8. Root Rot
+   - stunted growth
+   - yellow leaves
+   - black decayed roots

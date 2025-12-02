@@ -1,0 +1,35 @@
+Fruit: Blackcurrant
+
+Diseases:
+1. Powdery Mildew
+   - white leaf film
+   - distorted new leaves
+   - poor berry set
+2. Leaf Spot
+   - brown leaf specks
+   - yellow borders
+   - leaf shedding
+3. Big Bud Mite Damage
+   - swollen buds
+   - poor flowering
+   - stunted shoots
+4. Reversion Virus
+   - narrow leaves
+   - reduced fruit clusters
+   - pale leaf color
+5. Botrytis Rot
+   - grey fuzzy mold
+   - soft berry collapse
+   - stem-end rot
+6. Canker
+   - cracked stem lesions
+   - branch dieback
+   - bark peeling
+7. Rust
+   - orange spore patches
+   - leaf yellowing
+   - early defoliation
+8. Root Rot
+   - slow growth
+   - wilted stems
+   - dark decayed roots

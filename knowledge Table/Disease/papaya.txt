@@ -1,0 +1,43 @@
+Fruit: Papaya
+
+Diseases:
+
+1. Papaya Ringspot Virus
+   - mosaic patterns on leaves
+   - ring-shaped spots on fruit skin
+   - distorted leaf growth
+
+2. Anthracnose
+   - black sunken spots on ripe fruit
+   - rapid softening and rot
+   - orange or pink spore masses
+
+3. Phytophthora Blight
+   - water-soaked lesions on fruit
+   - white mold on infected areas
+   - sudden wilting of leaves
+
+4. Powdery Mildew
+   - white powder on leaf surface
+   - yellow patches on underside
+   - leaf curling
+
+5. Black Spot Disease
+   - small dark circular spots
+   - rough or scabby fruit surface
+   - spots enlarging during ripening
+
+6. Papaya Sticky Disease
+   - sticky latex exudation from fruit
+   - hard lumps under fruit skin
+   - uneven ripening
+
+7. Bacterial Canker
+   - water-soaked streaks on stems
+   - gummy exudate from lesions
+   - wilted young leaves
+
+8. Root Rot
+   - yellowing of lower leaves
+   - stunted growth
+   - black mushy roots

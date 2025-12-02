@@ -1,0 +1,43 @@
+Fruit: Banana
+
+Diseases:
+
+1. Black Sigatoka
+   - elongated dark streaks on leaves
+   - yellow halos around lesions
+   - premature leaf drying from the edges
+
+2. Fusarium Wilt
+   - yellowing and wilting of older leaves
+   - brown vascular discoloration inside pseudostem
+   - plant collapsing from the base upward
+
+3. Banana Bunchy Top Virus
+   - narrow upright leaves forming a bunchy appearance
+   - dark green streaks on leaf veins and petioles
+   - severe stunting of plant growth
+
+4. Crown Rot
+   - soft brown tissue around the crown
+   - black or dark fungal growth on crown
+   - foul rotting smell during ripening
+
+5. Anthracnose
+   - small sunken black spots on fruit skin
+   - rapid softening and decay during ripening
+   - pinkish spore masses on infected areas
+
+6. Banana Freckle
+   - tiny brown specks scattered across the peel
+   - roughened peel texture
+   - specks merging into irregular blotches
+
+7. Moko Bacterial Wilt
+   - sudden leaf wilt and yellowing
+   - bacterial ooze when stem or fruit is cut
+   - brown streaking inside fruit pulp
+
+8. Fruit Rot
+   - soft watery patches on skin
+   - rapid discoloration
+   - sour fermented smell

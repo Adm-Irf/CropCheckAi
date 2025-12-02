@@ -1,0 +1,35 @@
+Fruit: Cantaloupe
+
+Diseases:
+1. Powdery Mildew
+   - white powder on leaf surface
+   - curling young leaves
+   - early leaf death
+2. Downy Mildew
+   - yellow angular spots
+   - grey underside growth
+   - rapid defoliation
+3. Anthracnose
+   - sunken dark fruit lesions
+   - leaf scorch patterns
+   - vine decline
+4. Fusarium Wilt
+   - yellow one-sided vines
+   - brown vascular tissue
+   - plant collapse
+5. Gummy Stem Blight
+   - gummy stem cracks
+   - dark leaf spots
+   - vine death
+6. Bacterial Wilt
+   - sudden vine wilt
+   - sticky ooze from stem
+   - mottled leaf edge necrosis
+7. Mosaic Virus
+   - mosaic leaf patterns
+   - twisted vines
+   - reduced fruit size
+8. Sunburn
+   - pale bleached rind
+   - hardened skin
+   - surface cracking

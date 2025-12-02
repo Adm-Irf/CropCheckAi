@@ -1,0 +1,35 @@
+Fruit: Avocado
+
+Diseases:
+1. Anthracnose
+   - small dark fruit spots
+   - expanding sunken lesions
+   - post-harvest rot
+2. Phytophthora Root Rot
+   - feeder root decay
+   - yellowing canopy
+   - branch dieback
+3. Scab
+   - rough corky spots on fruit
+   - raised cracked lesions
+   - blemished skin
+4. Sunblotch Viroid
+   - discolored streaks on fruit
+   - mottled leaves
+   - stunted tree growth
+5. Cercospora Spot
+   - angular brown leaf spots
+   - yellow margins
+   - premature leaf drop
+6. Fruit Rot
+   - soft brown flesh patches
+   - fast deterioration
+   - internal breakdown
+7. Stem Canker
+   - brown sunken stem lesions
+   - drying branches
+   - cracking bark
+8. Sooty Mold
+   - black powder coating
+   - sticky leaf surface
+   - reduced photosynthesis

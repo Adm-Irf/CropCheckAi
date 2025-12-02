@@ -1,0 +1,35 @@
+Fruit: Sapodilla
+
+Diseases:
+1. Anthracnose
+   - black circular lesions
+   - cracked skin patches
+   - soft fruit rot
+2. Leaf Spot
+   - brown round spots
+   - yellow edges
+   - scattered lesions
+3. Fruit Rot
+   - brown rind softening
+   - water-soaked areas
+   - internal decay
+4. Sooty Mold
+   - black powder film
+   - sticky leaf surface
+   - weakened growth
+5. Leaf Blight
+   - large necrotic leaf patches
+   - dried tips
+   - premature leaf fall
+6. Powdery Mildew
+   - white powder spots
+   - curled juvenile leaves
+   - inhibited growth
+7. Blossom-End Rot
+   - dark lesion at fruit end
+   - leathery patch
+   - calcium imbalance signs
+8. Root Rot
+   - wilted young growth
+   - poor nutrient uptake
+   - blackened decayed roots

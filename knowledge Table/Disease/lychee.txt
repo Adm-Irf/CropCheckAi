@@ -1,0 +1,35 @@
+Fruit: Lychee
+
+Diseases:
+1. Anthracnose
+   - dark sunken skin lesions
+   - cracked fruit surface
+   - rapid fruit decay
+2. Fruit Borer Damage
+   - small exit holes
+   - brown internal tunnels
+   - spoiled flesh
+3. Powdery Mildew
+   - white powder on leaves
+   - distorted new shoots
+   - reduced fruit set
+4. Red Algae Spot
+   - reddish raised leaf patches
+   - roughened surface
+   - leaf yellowing
+5. Leaf Blight
+   - large brown patches
+   - drying leaf tips
+   - premature leaf fall
+6. Stem Canker
+   - cracked bark
+   - sunken stem lesions
+   - branch dieback
+7. Sooty Mold
+   - black fungal film
+   - sticky leaves
+   - weakened photosynthesis
+8. Root Rot
+   - slow growth
+   - wilted new shoots
+   - blackened roots

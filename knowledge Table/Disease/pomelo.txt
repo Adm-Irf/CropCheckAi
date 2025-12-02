@@ -1,0 +1,35 @@
+Fruit: Pomelo
+
+Diseases:
+1. Citrus Canker
+   - raised corky lesions
+   - yellow halos
+   - premature leaf drop
+2. Greasy Spot
+   - yellow leaf blisters
+   - dark oily underside
+   - early defoliation
+3. Phytophthora Rot
+   - soft brown rind lesions
+   - water-soaked patches
+   - fruit breakdown
+4. Citrus Scab
+   - wart-like bumps
+   - corky raised spots
+   - distorted fruit
+5. Melanose
+   - tiny scabby brown dots
+   - roughened rind
+   - non-expanding lesions
+6. Leaf Miner Damage
+   - silver winding trails
+   - curled young leaves
+   - leaf thinning
+7. Sooty Mold
+   - black powdery coating
+   - sticky honeydew layer
+   - photosynthesis reduction
+8. Nutrient Chlorosis
+   - pale yellow leaves
+   - green veins remaining
+   - poor fruit formation

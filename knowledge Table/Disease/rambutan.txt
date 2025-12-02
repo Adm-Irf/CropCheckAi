@@ -1,0 +1,35 @@
+Fruit: Rambutan
+
+Diseases:
+1. Anthracnose
+   - black sunken fruit spots
+   - necrotic patches on skin
+   - rapid fruit decay
+2. Pink Disease
+   - pink fungal growth on branches
+   - twig dieback
+   - bark cracking
+3. Powdery Mildew
+   - white powder on leaves
+   - distorted leaf growth
+   - poor fruit set
+4. Leaf Blight
+   - brown irregular leaf patches
+   - yellow edges
+   - dried leaf tips
+5. Stem Borer Damage
+   - small holes on stems
+   - frass around entry points
+   - branch dieback
+6. Fruit Rot (Fusarium)
+   - soft fruit tissue
+   - color change to brown
+   - fungal smell
+7. Sooty Mold
+   - black powder on leaves
+   - sticky honeydew
+   - reduced photosynthesis
+8. Dieback
+   - drying branches
+   - leaf wilting
+   - brown discoloration on twigs

@@ -1,0 +1,43 @@
+Fruit: Mango
+
+Diseases:
+
+1. Anthracnose
+   - black sunken lesions on fruit
+   - rapid fruit rot after harvesting
+   - dark spots on leaves and flowers
+
+2. Powdery Mildew
+   - white powdery layer on leaves and flowers
+   - distorted new leaves
+   - premature fruit drop
+
+3. Bacterial Black Spot
+   - raised black lesions with cracking
+   - oily appearance around spots
+   - streaks on twigs and stems
+
+4. Mango Scab
+   - corky brown spots on fruit skin
+   - raised lesions on leaves
+   - scabby patches forming clusters
+
+5. Alternaria Leaf Spot
+   - irregular brown patches on leaves
+   - yellow margins around spots
+   - premature leaf drop
+
+6. Mango Dieback
+   - drying of young shoots
+   - dark sunken patches on bark
+   - wilting of leaves starting at tips
+
+7. Stem-End Rot
+   - dark rot starting at fruit stem
+   - fruit softening during ripening
+   - sour smell from infected area
+
+8. Sooty Mold
+   - black powdery growth on leaf surface
+   - caused by insect honeydew
+   - reduced photosynthesis

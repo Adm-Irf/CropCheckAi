@@ -1,0 +1,35 @@
+Fruit: Starfruit
+
+Diseases:
+1. Anthracnose
+   - dark sunken spots
+   - fruit edge browning
+   - soft rot on ripe fruit
+2. Leaf Spot
+   - small brown patches
+   - yellow edges
+   - scattered lesions
+3. Fruit Scab
+   - corky scab-like bumps
+   - rough raised patches
+   - malformed fruit
+4. Phytophthora Rot
+   - water-soaked fruit lesions
+   - white fungal growth
+   - rapid collapse
+5. Pink Disease
+   - pink fungus on branches
+   - bark cracking
+   - twig death
+6. Bacterial Leaf Blight
+   - water-soaked streaks
+   - leaf yellowing
+   - premature drop
+7. Fruit Borer Damage
+   - holes in fruit
+   - internal tunneling
+   - browning flesh
+8. Sunburn
+   - pale yellow patches
+   - hardened skin
+   - surface cracking

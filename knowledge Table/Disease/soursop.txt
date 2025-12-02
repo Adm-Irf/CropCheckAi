@@ -1,0 +1,35 @@
+Fruit: Soursop
+
+Diseases:
+1. Anthracnose
+   - dark sunken lesions
+   - fruit shriveling
+   - soft rot on ripe fruit
+2. Fruit Borer Damage
+   - holes in green fruit
+   - brown internal tunnels
+   - premature fruit drop
+3. Leaf Spot
+   - brown or tan circular spots
+   - yellow margins
+   - scattered lesions
+4. Root Rot
+   - wilted young leaves
+   - poor new growth
+   - soft black roots
+5. Stem Blight
+   - dark elongated stem lesions
+   - branch dieback
+   - cracking bark
+6. Pink Disease
+   - pink fungal formation
+   - drying branches
+   - bark splitting
+7. Phytophthora Fruit Rot
+   - soft water-soaked spots
+   - white fungal growth
+   - rapid fruit decay
+8. Sooty Mold
+   - black leaf coating
+   - sticky honeydew layer
+   - reduced photosynthesis

@@ -1,0 +1,35 @@
+Fruit: Pomegranate
+
+Diseases:
+1. Bacterial Blight
+   - brown water-soaked leaf lesions
+   - cracked fruit spots
+   - blackening of twigs
+2. Alternaria Fruit Rot
+   - black sunken spots
+   - dry cracked lesions
+   - internal rot
+3. Wilt Disease
+   - sudden leaf drooping
+   - brown vascular tissues
+   - plant collapse
+4. Powdery Mildew
+   - white powder coating
+   - distorted leaves
+   - reduced fruit set
+5. Fruit Cracking
+   - split rind
+   - exposed arils
+   - uneven water uptake issues
+6. Anthracnose
+   - brown circular spots
+   - pink spore masses
+   - expanding lesions
+7. Bark Canker
+   - sunken dark stem lesions
+   - gummy exudate
+   - branch dieback
+8. Fruit Borer Damage
+   - holes in fruit rind
+   - brown tunnels inside
+   - drying arils

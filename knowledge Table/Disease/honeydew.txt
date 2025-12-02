@@ -1,0 +1,35 @@
+Fruit: Honeydew
+
+Diseases:
+1. Powdery Mildew
+   - white powder patches on leaves
+   - reduced fruit sugar content
+   - yellowing of older leaves
+2. Downy Mildew
+   - angular yellow leaf spots
+   - grey fuzz on underside
+   - rapid leaf collapse
+3. Anthracnose
+   - dark circular fruit spots
+   - expanding sunken lesions
+   - drying leaf lesions
+4. Mosaic Virus
+   - mottled yellow-green patterns
+   - distorted leaf shape
+   - stunted vine growth
+5. Gummy Stem Blight
+   - gummy ooze from stem cracks
+   - brown leaf spots
+   - vine dieback
+6. Fruit Blotch
+   - irregular dark rind spots
+   - water-soaked patches
+   - cracking fruit surface
+7. Fusarium Wilt
+   - yellowing lower leaves
+   - brown vascular streaks
+   - vine collapse
+8. Sunscald
+   - pale bleached rind areas
+   - hard leathery patches
+   - scorched streaks

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 import tempfile
+import base64
 from typing import Dict
 
 import streamlit as st
@@ -18,7 +19,6 @@ PAT = os.getenv("JAMAI_PAT")
 if not PROJECT_ID or not PAT:
     raise RuntimeError("JAMAI_PROJECT_ID or JAMAI_PAT missing in .env")
 
-# JamAI client (correct signature)
 client = JamAI(project_id=PROJECT_ID, token=PAT)
 
 # ==============================
@@ -29,43 +29,164 @@ TABLE_CLARIFY = "2. User Clarification"
 TABLE_FINAL = "3. Final Conclusion"
 
 # ==============================
-# Streamlit config
+# Streamlit UI Settings
 # ==============================
 st.set_page_config(
     page_title="CropCheckAI",
     page_icon="🌱",
     layout="wide",
 )
+
 st.title("🌾 CropCheckAI – Fruit & Crop Disease Assistant")
+
+# ==============================
+# Custom CSS
+# ==============================
+# GLOBAL LOADING OVERLAY (CSS + JS)
+st.markdown("""
+<style>
+#loading-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+}
+.loading-box {
+    background: #111;
+    padding: 25px 40px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    border: 1px solid #444;
+}
+.spinner {
+    border: 4px solid #444;
+    border-top: 4px solid #ff4b4b;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    animation: spin 0.9s linear infinite;
+    margin: 10px auto 15px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+
+<div id="loading-overlay">
+    <div class="loading-box">
+        <div class="spinner"></div>
+        <span id="loading-text">Loading...</span>
+    </div>
+</div>
+
+<script>
+function showLoader(text){
+    document.getElementById("loading-text").innerText = text;
+    document.getElementById("loading-overlay").style.display = "flex";
+}
+</script>
+""", unsafe_allow_html=True)
+
+
+st.markdown("""
+<style>
+
+    /* Placeholder image box */
+    .image-box {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #1e1e1e50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px auto;
+        border: 1px solid #333;
+    }
+
+    .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Main layout container */
+    .block-container {
+        padding: 0rem 1rem 2rem 1rem !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 900px;
+    }
+
+    @media (max-width: 600px) {
+        .block-container {
+            padding-top: 4rem !important;
+        }
+    }
+
+    @media (min-width: 601px) {
+        .block-container {
+            padding-top: 2rem !important;
+        }
+    }
+
+    header, [data-testid="stHeader"] {
+        height: 0px !important;
+    }
+
+    /* Mobile button styles */
+    @media (max-width: 600px) {
+        .stButton>button {
+            width: 100% !important;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+</style>
+""", unsafe_allow_html=True)
+
 
 # ==============================
 # Helpers
 # ==============================
-
-def upload_streamlit_file(tmp_file) -> str:
-    """Save uploaded file to a temp path and upload to JamAI file store.
-    Returns the file URI that can be used in an Action table.
-    """
+def upload_streamlit_file(tmp_file):
     suffix = os.path.splitext(tmp_file.name)[1]
+
+    # Reset stream pointer (CRITICAL FIX)
+    tmp_file.seek(0)
+
     with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as f:
         f.write(tmp_file.read())
         temp_path = f.name
 
     try:
-        file_resp = client.file.upload_file(temp_path)
-        return file_resp.uri
+        resp = client.file.upload_file(temp_path)
+        return resp.uri
     finally:
         try:
             os.remove(temp_path)
-        except OSError:
+        except:
             pass
 
 
+
+
 def run_action_row(table_id: str, data: Dict[str, str]) -> Dict[str, str]:
-    """Call an Action table once and return a simple dict of outputs."""
+    """Run an Action table and return text outputs."""
     resp = client.table.add_table_rows(
         table_type=t.TableType.ACTION,
-        request=t.RowAddRequest(
+        request=t.MultiRowAddRequest(
             table_id=table_id,
             data=[data],
             stream=False,
@@ -73,19 +194,34 @@ def run_action_row(table_id: str, data: Dict[str, str]) -> Dict[str, str]:
     )
 
     row = resp.rows[0]
-    out: Dict[str, str] = {}
-    for col_name, col_val in row.columns.items():
-        # Most of your columns are text outputs
-        if hasattr(col_val, "text") and col_val.text is not None:
-            out[col_name] = col_val.text
+    out = {}
+
+    for name, val in row.columns.items():
+        if hasattr(val, "text") and val.text:
+            out[name] = val.text
 
     return out
 
 
-# ==============================
-# Session state
-# ==============================
+def show_image_in_box(uploaded_file):
+    """Embed image inside placeholder container using base64."""
+    uploaded_file.seek(0)
+    bytes_data = uploaded_file.read()
+    encoded = base64.b64encode(bytes_data).decode()
 
+    st.markdown(
+        f"""
+        <div class="image-box">
+            <img src="data:image/jpeg;base64,{encoded}">
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+# ==============================
+# Session State
+# ==============================
 if "step" not in st.session_state:
     st.session_state.step = 1
 
@@ -107,54 +243,52 @@ def reset_all():
     st.rerun()
 
 
-# Sidebar
+# Sidebar actions
 st.sidebar.header("Actions")
 if st.sidebar.button("🔄 Start over", use_container_width=True):
     reset_all()
-st.sidebar.markdown("This tool focuses on **fruit & crop diseases** only.")
 
-# =======================================================================
-# STEP 1 – Detect the Problem  (Table: 1. Detect the Problem)
-# =======================================================================
+
+# ===================================================================
+# STEP 1 – Detect the Problem
+# ===================================================================
 if st.session_state.step == 1:
+
     st.header("Step 1 – Upload crop image & symptoms")
 
-    c1, c2 = st.columns([1, 1])
+    st.subheader("Upload a photo of the affected crop/fruit")
+    user_image = st.file_uploader(
+        "Upload Image",
+        type=["jpg", "jpeg", "png"],
+        label_visibility="collapsed",
+    )
 
-    # ----------- IMAGE UPLOAD -----------
-    with c1:
-        user_image = st.file_uploader(
-            "Upload a photo of the affected crop/fruit",
-            type=["jpg", "jpeg", "png"],
-        )
+    if user_image:
+        st.markdown("### 📷 Image Preview")
+        show_image_in_box(user_image)
 
-        # Show preview immediately
-        if user_image:
-            st.markdown("### 📷 Image Preview")
-            st.image(user_image, use_column_width=True)
+    st.subheader("Describe the symptoms")
+    user_desc = st.text_area(
+        "desc",
+        placeholder="Example: Brown spots on mango leaves, dark patches near fruit stem…",
+        label_visibility="collapsed",
+        height=180,
+    )
 
-    # ----------- DESCRIPTION -----------
-    with c2:
-        user_desc = st.text_area(
-            "Describe the symptoms (spots, rot, wilting, etc.)",
-            placeholder="Example: Brown spots on mango leaves, some fruits turning black near the stem...",
-            height=200,
-        )
+    colA, colB, colC = st.columns([1, 2, 1])
+    with colB:
+        submitted = st.button("Analyze disease", type="primary", use_container_width=True)
 
-    # ----------- SUBMIT BUTTON -----------
-    if st.button("Analyze disease", type="primary"):
+    if submitted:
         if not user_image or not user_desc:
-            st.warning("Please upload an image **and** describe the symptoms.")
+            st.warning("Please upload an image AND describe the symptoms.")
         else:
-            with st.spinner("Analyzing crop / fruit disease..."):
-                img_uri = upload_streamlit_file(user_image)
+            with st.spinner("Analyzing crop / fruit disease…"):
+                uri = upload_streamlit_file(user_image)
 
                 detect_out = run_action_row(
                     TABLE_DETECT,
-                    {
-                        "user_image": img_uri,
-                        "user_desc": user_desc,
-                    },
+                    {"user_image": uri, "user_desc": user_desc},
                 )
 
                 st.session_state.detect_out = detect_out
@@ -164,40 +298,40 @@ if st.session_state.step == 1:
     st.stop()
 
 
-# =======================================================================
-# STEP 2 – User Clarification  (Table: 2. User Clarification)
-# =======================================================================
+# ===================================================================
+# STEP 2 – User Clarification
+# ===================================================================
 if st.session_state.step == 2:
+
     detect = st.session_state.detect_out
 
     st.header("Step 2 – Confirm details about the disease")
 
-    st.write("### 🧾 Detected crop & initial disease guess")
     st.info(
-        f"**Crop type:** {detect.get('crop_type', 'N/A')}\n\n"
-        f"**Initial disease guess:** {detect.get('initial_guess', 'N/A')}\n\n"
-        f"**Confidence level:** {detect.get('confidence_level', 'N/A')}"
+        f"**Crop type:** {detect.get('crop_type')}\n\n"
+        f"**Initial guess:** {detect.get('initial_guess')}\n\n"
+        f"**Confidence:** {detect.get('confidence_level', 'N/A')}"
     )
 
-    st.write("### ❓ Clarifying question")
-    st.warning(detect.get("clarifying_question", "No question generated."))
+    st.warning(detect.get("clarifying_question", "No clarifying question."))
 
     user_answer = st.text_area(
-        "Your answer (based on what you see in your field):",
-        placeholder="Example: Yes, the spots are spreading from lower leaves upwards...",
+        "Your answer:",
+        placeholder="Example: Yes, the spots are spreading upward…",
     )
 
     if st.button("Submit answer", type="primary"):
         if not user_answer:
-            st.warning("Please type your answer first.")
+            st.warning("Please type your answer.")
         else:
-            with st.spinner("Interpreting your answer..."):
-                # IMPORTANT: this expects an **input column** in table 2.
-                # Create an INPUT text column named `user_answer` in
-                # \"2. User Clarification\" and keep the three outputs you showed.
+            with st.spinner("Interpreting your answer…"):
+
                 clarify_out = run_action_row(
                     TABLE_CLARIFY,
                     {
+                        "crop_type": detect.get("crop_type"),
+                        "initial_guess": detect.get("initial_guess"),
+                        "clarifying_question": detect.get("clarifying_question"),
                         "user_answer": user_answer,
                     },
                 )
@@ -209,52 +343,43 @@ if st.session_state.step == 2:
     st.stop()
 
 
-# =======================================================================
-# STEP 3 – Final Conclusion  (Table: 3. Final Conclusion)
-# =======================================================================
+# ===================================================================
+# STEP 3 – Final Conclusion
+# ===================================================================
 if st.session_state.step == 3:
+
     detect = st.session_state.detect_out
     clarify = st.session_state.clarify_out
 
     st.header("Step 3 – Final diagnosis & recommendations")
 
-    # We pass a compact case summary into table 3.
-    # Create an INPUT text column in \"3. Final Conclusion\" called `case_context`
-    # and keep your four output columns.
-    case_context = f"""
-Crop type: {detect.get('crop_type', '')}
-Initial disease guess: {detect.get('initial_guess', '')}
-Confidence level: {detect.get('confidence_level', '')}
+    with st.spinner("Preparing final diagnosis…"):
 
-Cleaned user clarification: {clarify.get('cleaned_answer', '')}
-Interpretation of answer: {clarify.get('answer_interpretation', '')}
-Does user answer support initial guess?: {clarify.get('supports_initial_guess', '')}
-"""
-
-    with st.spinner("Generating final fruit/crop disease diagnosis..."):
         final_out = run_action_row(
             TABLE_FINAL,
             {
-                "case_context": case_context,
+                "crop_type": detect.get("crop_type"),
+                "initial_guess": detect.get("initial_guess"),
+                "cleaned_answer": clarify.get("cleaned_answer"),
+                "confidence_level": clarify.get("confidence_level"),
             },
         )
+
         st.session_state.final_out = final_out
 
     final = st.session_state.final_out
 
     st.subheader("🌿 Final disease diagnosis")
-    st.success(final.get("final_diagnosis", "No diagnosis generated."))
+    st.success(final.get("final_diagnosis", ""))
 
     st.subheader("🦠 Cause")
-    st.write(final.get("cause", "No cause generated."))
+    st.write(final.get("cause", ""))
 
     st.subheader("🧴 Treatment steps")
-    st.write(final.get("treatment_steps", "No treatment steps generated."))
+    st.write(final.get("treatment_steps", ""))
 
     st.subheader("🛡 Prevention tips")
-    st.write(final.get("prevention_tips", "No prevention tips generated."))
-
-    st.success("✔ Fruit/crop disease analysis completed.")
+    st.write(final.get("prevention_tips", ""))
 
     if st.button("Start a new case"):
         reset_all()

@@ -1,0 +1,35 @@
+Fruit: Blueberry
+
+Diseases:
+1. Anthracnose
+   - soft berry rot
+   - salmon-colored spore masses
+   - shriveled berries
+2. Mummy Berry Disease
+   - tan shriveledberries
+   - wilted new shoots
+   - fruit drop
+3. Botrytis Rot
+   - grey fuzzy mold
+   - soft watery berries
+   - stem-end softening
+4. Leaf Spot
+   - brown circular leaf spots
+   - dark edges
+   - scattered lesions
+5. Powdery Mildew
+   - white coating on leaves
+   - reddened leaf tips
+   - reduced vigor
+6. Root Rot
+   - stunted bushes
+   - yellowing leaves
+   - rotting fibrous roots
+7. Phytophthora Blight
+   - stem darkening
+   - wilting shoots
+   - canopy collapse
+8. Canker Disease
+   - sunken stem lesions
+   - branch dieback
+   - cracked bark

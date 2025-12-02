@@ -1,0 +1,35 @@
+Fruit: Longan
+
+Diseases:
+1. Anthracnose
+   - black sunken fruit spots
+   - dry necrotic patches
+   - post-harvest rot
+2. Powdery Mildew
+   - white powder on young leaves
+   - distorted shoots
+   - reduced flowering
+3. Leaf Blight
+   - brown leaf lesions
+   - yellow borders
+   - premature leaf drop
+4. Sooty Mold
+   - black sooty coating
+   - sticky leaf surface
+   - reduced photosynthesis
+5. Fruit Borer Damage
+   - small holes on fruit skin
+   - internal tunneling
+   - premature fruit drop
+6. Root Rot
+   - wilted canopy
+   - stunted growth
+   - dark soft roots
+7. Pink Disease
+   - pink fungal crust
+   - branch dieback
+   - cracked bark
+8. Algal Leaf Spot
+   - rusty orange spots
+   - raised circular patches
+   - slow leaf weakening

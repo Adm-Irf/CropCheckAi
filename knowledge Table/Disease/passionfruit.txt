@@ -1,0 +1,35 @@
+Fruit: Passionfruit
+
+Diseases:
+1. Brown Spot
+   - brown circular leaf lesions
+   - yellow margins
+   - scattered spotting
+2. Fusarium Wilt
+   - wilting vines
+   - brown vascular streaks
+   - plant collapse
+3. Anthracnose
+   - sunken dark fruit spots
+   - softening of infected areas
+   - post-harvest rot
+4. Septoria Leaf Spot
+   - small grey leaf spots
+   - dark borders
+   - premature leaf drop
+5. Mosaic Virus
+   - mottled yellow-green leaves
+   - leaf distortion
+   - reduced vine vigor
+6. Fruit Rot (Phytophthora)
+   - water-soaked fruit patches
+   - white fungal growth
+   - rapid rot
+7. Alternaria Blight
+   - brown expanding leaf patches
+   - dry lesion centers
+   - leaf curling
+8. Root Rot
+   - yellow vine canopy
+   - stunted growth
+   - black soft roots

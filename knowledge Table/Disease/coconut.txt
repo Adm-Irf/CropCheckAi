@@ -1,0 +1,35 @@
+Fruit: Coconut
+
+Diseases:
+1. Bud Rot
+   - soft decaying growing point
+   - foul smell
+   - unopened spear leaf turning brown
+2. Lethal Yellowing
+   - yellowing of lower fronds
+   - fruit drop
+   - blackening of inflorescence
+3. Stem Bleeding
+   - reddish-brown fluid oozing
+   - dark streaks on trunk
+   - gradual decline of canopy
+4. Leaf Spot
+   - brown circular leaf lesions
+   - yellow margins
+   - scattered spotting
+5. Root Wilt
+   - drooping leaflets
+   - small malformed nuts
+   - slow growth
+6. Ganoderma Butt Rot
+   - decay at trunk base
+   - fungal brackets near soil line
+   - tree instability
+7. Black-Headed Caterpillar Damage
+   - chewed leaf surfaces
+   - dried leaf tips
+   - webbing on fronds
+8. Nutrient Deficiency (Potassium)
+   - orange leaf spotting
+   - yellow edges
+   - weak fruit set

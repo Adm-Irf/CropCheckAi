@@ -1,0 +1,43 @@
+Fruit: Citrus
+
+Diseases:
+
+1. Citrus Canker
+   - raised brown lesions with yellow halo
+   - corky scabs on fruit skin
+   - leaf drop in severe cases
+
+2. Greasy Spot
+   - yellow blister-like spots
+   - dark greasy appearance on underside
+   - premature leaf fall
+
+3. Citrus Scab
+   - corky wart-like bumps on fruit
+   - raised scabs on young leaves
+   - distorted fruit shape
+
+4. Melanose
+   - small dark rough spots
+   - scabby surface texture
+   - affected areas do not enlarge
+
+5. Phytophthora Root Rot
+   - gummy exudate around trunk base
+   - yellowing canopy
+   - poor fruit set
+
+6. Sooty Mold
+   - black powdery coating
+   - caused by insect honeydew
+   - reduced photosynthesis
+
+7. Citrus Tristeza Virus
+   - stem pitting
+   - vein clearing
+   - stunted tree growth
+
+8. Citrus Scab (Elsinoë)
+   - wart-like raised lesions
+   - cracks on fruit rind
+   - roughened surface

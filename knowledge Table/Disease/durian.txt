@@ -1,0 +1,35 @@
+Fruit: Durian
+
+Diseases:
+1. Phytophthora Root Rot
+   - root browning
+   - tree wilting
+   - small fruit set
+2. Stem Canker
+   - cracked brown patches on trunk
+   - gummy oozing lesions
+   - bark peeling
+3. Leaf Blight
+   - brown leaf spots
+   - yellowing margins
+   - leaf drop
+4. Fruit Rot
+   - soft brown patches on husk
+   - water-soaked lesions
+   - internal rot
+5. Dieback
+   - drying branch tips
+   - twig death
+   - sparse canopy
+6. Pink Disease
+   - pink fungal coating
+   - branch dieback
+   - cracked bark
+7. Anthracnose
+   - dark fruit spots
+   - necrotic patches
+   - skin cracking
+8. Nematode Damage
+   - stunted root system
+   - yellow foliage
+   - reduced fruit size

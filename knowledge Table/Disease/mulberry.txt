@@ -1,0 +1,35 @@
+Fruit: Mulberry
+
+Diseases:
+1. Leaf Spot
+   - brown circular leaf spots
+   - yellow halos
+   - scattered lesions
+2. Powdery Mildew
+   - white leaf coating
+   - curled young leaves
+   - weakened growth
+3. Root Rot
+   - stunted plants
+   - yellow wilted leaves
+   - black soft roots
+4. Bacterial Wilt
+   - sudden leaf drooping
+   - brown vascular tissue
+   - plant collapse
+5. Fruit Rot
+   - soft browning fruits
+   - water-soaked areas
+   - fungal smell
+6. Leaf Blight
+   - large necrotic patches
+   - dry edges
+   - premature leaf drop
+7. Nematode Damage
+   - swollen roots
+   - stunted canopy
+   - small fruits
+8. Dieback
+   - drying branch tips
+   - twig death
+   - thinning foliage

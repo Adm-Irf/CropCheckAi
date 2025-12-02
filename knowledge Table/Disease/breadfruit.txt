@@ -1,0 +1,35 @@
+Fruit: Breadfruit
+
+Diseases:
+1. Fruit Rot (Rhizopus)
+   - soft watery patches
+   - fast decay
+   - white fungal strands
+2. Leaf Spot
+   - brown irregular leaf lesions
+   - yellow halos
+   - leaf shedding
+3. Phytophthora Rot
+   - dark water-soaked areas
+   - fruit skin cracking
+   - flesh collapse
+4. Sooty Mold
+   - black leaf surface
+   - sticky coating
+   - reduced light absorption
+5. Rust
+   - orange leaf pustules
+   - powdery spores
+   - early leaf fall
+6. Stem Canker
+   - sunken brown lesions
+   - bark cracking
+   - branch dieback
+7. Nematode Damage
+   - stunted growth
+   - root swelling
+   - small pale fruits
+8. Fruit Borer Damage
+   - entry holes on fruit
+   - internal tunneling
+   - rotting flesh
