@@ -42,7 +42,7 @@ st.title("🌾 CropCheckAI – Fruit & Crop Disease Assistant")
 # ==============================
 # Custom CSS
 # ==============================
-# GLOBAL LOADING OVERLAY (CSS + JS)
+
 st.markdown("""
 <style>
 #loading-overlay {
