@@ -49,21 +49,7 @@ CropCheckAi/
 └── knowledge Table   # (Placeholder / utility files — describe if used)  
 ```
 
-## How to Contribute
-
-Feel free to open issues or submit pull requests. If you want to:  
-- Improve or replace the analysis algorithm (e.g. use a better ML / DL model),  
-- Extend the interface (e.g. add batch-processing, reporting, UI improvements),  
-- Add documentation or share usage cases,  
-
-just fork the repo and send a PR.  
-
-## License
-
-*(Add your license here — e.g. MIT, GPL, Apache — or remove if not yet decided.)*
-
 ## Contact / Author
 
 Created by Adm-Irf.  
-If you have questions or need help, feel free to open an issue.  
-
+If you have questions or need help, feel free to open an contact me.  
