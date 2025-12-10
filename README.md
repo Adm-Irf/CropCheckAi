@@ -51,5 +51,9 @@ CropCheckAi/
 
 ## Contact / Author
 
-Created by Adm-Irf.  
-If you have questions or need help, feel free to open an contact me.  
+Created by **Adm-Irf**.  
+If you have any questions, feedback, or need assistance, feel free to reach out.
+
+> **Note:**  
+> This project uses the free tier of JamAI Base.  
+> The Project ID and PAT shown in the code are intentionally provided for educational and testing purposes.
