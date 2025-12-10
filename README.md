@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 - To run the app:  
   ```bash
-  python app.py
+  streamlit run app.py
   ```  
 - Or to run a demo in the notebook: open `Test.ipynb` in Jupyter.  
 - Provide an input image (or a folder of images), and the tool will process and output results (e.g. detection / classification / health-status—depending on implementation).
